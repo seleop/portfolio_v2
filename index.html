@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi! here is JHD's</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hi! here is JHD's</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <script>
+            window.addEventListener("load", () => {
+                document.querySelector(".nowloading").style.display = "none";
+                document.querySelector("#loading__name").style.display = "block";
+            });
+        </script>
+    </head>
+    <body>
+        <div id="loading">
+            <div class="nowloading"></div>
+            <span id="loading__name">Jung, Heedo.</span>
+        </div>
+        <div id="contents">
+            rkskskkssk
+        </div>
+
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="./assets/js/loading.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
