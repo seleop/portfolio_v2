@@ -48,8 +48,9 @@ li {
             font-family: "NHDisplayMideum";
             font-size: 320px;
             text-wrap: nowrap;
-            mix-blend-mode:hard-light;
+            mix-blend-mode: hard-light;
             color: $porfolio--color--white;
+            opacity: 1;
             z-index: 10;
         }
         .main-imgwrap {
@@ -77,31 +78,41 @@ li {
         position: absolute;
         bottom: 5%;
         color: $porfolio--color--white;
-        .section1-bottom__top{
+        .section1-bottom__top {
             display: flex;
             justify-content: space-between;
-            .section1-bottom__name{
+            .section1-bottom__name {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 font-family: "NHDisplaythin";
                 font-size: 60px;
-                line-height: 60px;
+                line-height: 70px;
+                #name01,
+                #name02 {
+                    overflow: hidden;
+                }
             }
-            .section1-bottom__contents{
+            .section1-bottom__contents {
                 display: flex;
                 flex-direction: column;
                 align-items: end;
                 font-family: "NHDisplayLight";
                 font-size: 50px;
                 line-height: 50px;
-                #section1-word-point{
-                    font-style: italic;
-                    color: $porfolio--color--blue;
+                .section1-spanwrap {
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    align-items: end;
+                    span {
+                        font-style: italic;
+                        color: $porfolio--color--blue;
+                    }
                 }
             }
         }
-        .section1-horizon__line{
+        .section1-horizon__line {
             position: relative;
             width: 100%;
             height: 1px;
@@ -116,9 +127,10 @@ li {
             font-family: "NHDisplayLight";
             font-size: 1rem;
             line-height: 24px;
+            overflow: hidden;
         }
     }
-    .section1-background{
+    .section1-background {
         width: 100%;
         height: 100%;
         .section1_bg_video {
@@ -135,7 +147,7 @@ li {
 
 .section2 {
     background-color: $porfolio--color--white;
-    .section2-appeal{
+    .section2-appeal {
         display: flex;
         flex-direction: column;
         padding: 500px 0;
@@ -145,7 +157,7 @@ li {
             font-family: "NHDisplayMideum";
             font-size: 150px;
             line-height: 100px;
-            color : $porfolio--color--black;
+            color: $porfolio--color--black;
             .section2_decoblock {
                 height: 110px;
                 video {
@@ -154,17 +166,17 @@ li {
                     object-fit: cover;
                 }
             }
-            .section2_decoblock01{
+            .section2_decoblock01 {
                 width: 800px;
             }
         }
-        .appeal__line02{
-            .section2-appeal__horizon-line{
+        .appeal__line02 {
+            .section2-appeal__horizon-line {
                 width: 500px;
                 height: 5px;
                 background-color: $porfolio--color--black;
             }
-            .section2_decoblock02{
+            .section2_decoblock02 {
                 width: 400px;
             }
         }
@@ -173,14 +185,14 @@ li {
 
 .section3 {
     padding: 400px 0;
-    .section3-inner{
+    .section3-inner {
         position: relative;
         font-family: "NHDisplayLight";
         font-size: 50px;
         color: $porfolio--color--white;
         .section3-img {
             position: absolute;
-            top:50%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 285px;
@@ -198,7 +210,7 @@ li {
             align-items: center;
             .last-sentence {
                 display: flex;
-                .section3-inner-block{
+                .section3-inner-block {
                     display: flex;
                     align-items: center;
                     color: $porfolio--color--blue;
@@ -209,7 +221,7 @@ li {
     }
 }
 
-.section4{
+.section4 {
     padding: 200px 0;
     .section4-container {
         display: flex;
@@ -222,16 +234,16 @@ li {
             font-size: 200px;
             line-height: 240px;
             color: $porfolio--color--white;
-            .section4-left-first{
+            .section4-left-first {
                 text-align: left;
             }
             .section4-left-second {
                 text-align: right;
             }
-            .section4-left-third{
+            .section4-left-third {
                 text-align: center;
                 margin-top: 2rem;
-                strong{
+                strong {
                     font-size: 160px;
                     padding: 33px 110px;
                     border: 1px solid $porfolio--color--blue;
@@ -242,4 +254,3 @@ li {
         }
     }
 }
-

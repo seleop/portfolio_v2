@@ -118,6 +118,7 @@ li {
   text-wrap: nowrap;
   mix-blend-mode: hard-light;
   color: #fcfcfc;
+  opacity: 1;
   z-index: 10;
 }
 .section1 .section1-middle .main-imgwrap {
@@ -133,7 +134,8 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .section1 .section1-bottom__container {
   width: 100vw;
@@ -155,7 +157,11 @@ li {
   justify-content: flex-end;
   font-family: "NHDisplaythin";
   font-size: 60px;
-  line-height: 60px;
+  line-height: 70px;
+}
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__name #name01,
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__name #name02 {
+  overflow: hidden;
 }
 .section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents {
   display: flex;
@@ -165,7 +171,13 @@ li {
   font-size: 50px;
   line-height: 50px;
 }
-.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents #section1-word-point {
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents .section1-spanwrap {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: end;
+}
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents .section1-spanwrap span {
   font-style: italic;
   color: #15F5BA;
 }
@@ -184,6 +196,7 @@ li {
   font-family: "NHDisplayLight";
   font-size: 1rem;
   line-height: 24px;
+  overflow: hidden;
 }
 .section1 .section1-background {
   width: 100%;
@@ -196,7 +209,8 @@ li {
   top: 0;
   left: 0;
   z-index: -1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section2 {
@@ -221,7 +235,8 @@ li {
 .section2 .section2-appeal .section2-appeal__line .section2_decoblock video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .section2 .section2-appeal .section2-appeal__line .section2_decoblock01 {
   width: 800px;
@@ -256,7 +271,8 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 36px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .section3 .section3-inner .section3-inner-sentences {
   display: flex;

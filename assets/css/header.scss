@@ -17,32 +17,33 @@ header {
         height: 100px;
         color: $porfolio--color--white;
         background-color: $porfolio--color--black;
-        transition: .3s;
+        transition: 0.3s;
     }
     #logo {
         font-family: "NHDisplayLight";
         font-size: 38px;
     }
-    nav{
-        ul{
+    nav {
+        ul {
             display: flex;
             gap: 2rem;
-            li{
-                a{
+            li {
+                a {
                     font-family: "NHDisplayLight";
                     font-size: 24px;
                 }
             }
         }
     }
-    .clock{
+    .clock {
         display: flex;
         flex-direction: column;
+        gap: 0.2rem;
         align-items: end;
         font-family: "NHDisplayRoman";
         strong {
             font-weight: 200;
-            font-size: 28px;
+            font-size: 20px;
         }
         span {
             font-family: "NHDisplayLight";
@@ -50,4 +51,3 @@ header {
         }
     }
 }
-

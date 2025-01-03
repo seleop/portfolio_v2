@@ -9,7 +9,8 @@ header {
   justify-content: space-between;
   color: #fcfcfc;
   background-color: rgba(0, 0, 0, 0.4666666667);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   z-index: 1000;
 }
 header.active {
@@ -33,12 +34,13 @@ header nav ul li a {
 header .clock {
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
   align-items: end;
   font-family: "NHDisplayRoman";
 }
 header .clock strong {
   font-weight: 200;
-  font-size: 28px;
+  font-size: 20px;
 }
 header .clock span {
   font-family: "NHDisplayLight";
