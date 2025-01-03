@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import "./loading.css";
+@import "./header.css";
 @keyframes nowloading {
   0% {
     box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
@@ -47,6 +50,28 @@
   font-family: "Montserrat";
   src: url(../font/Montserrat-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "NHDisplaythin";
+  src: url(../font/NeueHaasDisplayThin.ttf);
+}
+@font-face {
+  font-family: "NHDisplayLight";
+  src: url(../font/NeueHaasDisplayLight.ttf);
+}
+@font-face {
+  font-family: "NHDisplayRoman";
+  src: url(../font/NeueHaasDisplayRoman.ttf);
+}
+@font-face {
+  font-family: "NHDisplayMideum";
+  src: url(../font/NeueHaasDisplayMediu.ttf);
+}
+@font-face {
+  font-family: "Caveat";
+  src: url(../font/Caveat-VariableFont_wght.ttf);
+}
+/* 로딩 화면 스타일*/
+/* 헤더 스타일 */
 * {
   margin: 0;
   padding: 0;
@@ -54,44 +79,230 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: #fcfcfc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
 }
 
 #contents {
   position: relative;
   z-index: 0;
-  display: none;
+  display: block;
   min-height: 100vh;
-  background-color: #333;
+  background-color: #121212;
 }
 
-#loading {
-  width: 100%;
+.section1 {
+  position: relative;
   height: 100vh;
-  position: fixed;
+}
+.section1 .section1-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.section1 .section1-middle strong {
+  display: inline-block;
+  position: relative;
+  font-family: "NHDisplayMideum";
+  font-size: 320px;
+  text-wrap: nowrap;
+  mix-blend-mode: hard-light;
+  color: #fcfcfc;
+  z-index: 10;
+}
+.section1 .section1-middle .main-imgwrap {
+  width: 250px;
+  height: 286px;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 0;
+}
+.section1 .section1-middle .main-imgwrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.section1 .section1-bottom__container {
+  width: 100vw;
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  bottom: 5%;
+  color: #fcfcfc;
+}
+.section1 .section1-bottom__container .section1-bottom__top {
+  display: flex;
+  justify-content: space-between;
+}
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "NHDisplaythin";
+  font-size: 60px;
+  line-height: 60px;
+}
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: "NHDisplayLight";
+  font-size: 50px;
+  line-height: 50px;
+}
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents #section1-word-point {
+  font-style: italic;
+  color: #15F5BA;
+}
+.section1 .section1-bottom__container .section1-horizon__line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fcfcfc;
+}
+.section1 .section1-bottom__container .section1-bottom__subcontents {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "NHDisplayLight";
+  font-size: 1rem;
+  line-height: 24px;
+}
+.section1 .section1-background {
+  width: 100%;
+  height: 100%;
+}
+.section1 .section1-background .section1_bg_video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.section2 {
+  background-color: #fcfcfc;
+}
+.section2 .section2-appeal {
+  display: flex;
+  flex-direction: column;
+  padding: 500px 0;
+}
+.section2 .section2-appeal .section2-appeal__line {
+  display: flex;
+  align-items: center;
+  font-family: "NHDisplayMideum";
+  font-size: 150px;
+  line-height: 100px;
+  color: #000;
+}
+.section2 .section2-appeal .section2-appeal__line .section2_decoblock {
+  height: 110px;
+}
+.section2 .section2-appeal .section2-appeal__line .section2_decoblock video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section2 .section2-appeal .section2-appeal__line .section2_decoblock01 {
+  width: 800px;
+}
+.section2 .section2-appeal .appeal__line02 .section2-appeal__horizon-line {
+  width: 500px;
+  height: 5px;
+  background-color: #000;
+}
+.section2 .section2-appeal .appeal__line02 .section2_decoblock02 {
+  width: 400px;
+}
+
+.section3 {
+  padding: 400px 0;
+}
+.section3 .section3-inner {
+  position: relative;
+  font-family: "NHDisplayLight";
+  font-size: 50px;
+  color: #fcfcfc;
+}
+.section3 .section3-inner .section3-img {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 285px;
+  height: 350px;
+}
+.section3 .section3-inner .section3-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 36px;
+  object-fit: cover;
+}
+.section3 .section3-inner .section3-inner-sentences {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: #fcfcfc;
-  z-index: 1000;
 }
-#loading .nowloading {
-  display: inline-block;
-  color: #333;
-  vertical-align: middle;
-  pointer-events: none;
-  height: 0.1rem;
-  width: 0.1rem;
-  box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
-  animation: nowloading 6s infinite;
+.section3 .section3-inner .section3-inner-sentences .last-sentence {
+  display: flex;
 }
-#loading #loading__name {
-  display: none;
-  font-size: 28px;
-  letter-spacing: -2%;
-  font-family: "Montserrat";
-  overflow: hidden;
+.section3 .section3-inner .section3-inner-sentences .last-sentence .section3-inner-block {
+  display: flex;
+  align-items: center;
+  color: #15F5BA;
+  font-family: "Caveat";
+}
+
+.section4 {
+  padding: 200px 0;
+}
+.section4 .section4-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 43px;
+}
+.section4 .section4-container .section4-leftblock {
+  display: flex;
+  flex-direction: column;
+  font-family: "NHDisplayMideum";
+  font-size: 200px;
+  line-height: 240px;
+  color: #fcfcfc;
+}
+.section4 .section4-container .section4-leftblock .section4-left-first {
+  text-align: left;
+}
+.section4 .section4-container .section4-leftblock .section4-left-second {
+  text-align: right;
+}
+.section4 .section4-container .section4-leftblock .section4-left-third {
+  text-align: center;
+  margin-top: 2rem;
+}
+.section4 .section4-container .section4-leftblock .section4-left-third strong {
+  font-size: 160px;
+  padding: 33px 110px;
+  border: 1px solid #15F5BA;
+  border-radius: 500px;
+  color: #15F5BA;
 }/*# sourceMappingURL=style.css.map */

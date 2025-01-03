@@ -1,0 +1,46 @@
+header {
+  width: 100vw;
+  height: 150px;
+  padding: 0 150px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fcfcfc;
+  background-color: rgba(0, 0, 0, 0.4666666667);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+header.active {
+  height: 100px;
+  color: #fcfcfc;
+  background-color: #000;
+  transition: 0.3s;
+}
+header #logo {
+  font-family: "NHDisplayLight";
+  font-size: 38px;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+header nav ul li a {
+  font-family: "NHDisplayLight";
+  font-size: 24px;
+}
+header .clock {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: "NHDisplayRoman";
+}
+header .clock strong {
+  font-weight: 200;
+  font-size: 28px;
+}
+header .clock span {
+  font-family: "NHDisplayLight";
+  font-size: 14px;
+}/*# sourceMappingURL=header.css.map */
