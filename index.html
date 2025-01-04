@@ -6,10 +6,10 @@
         <title>Hi! here is JHD's</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
         <script>
-            // window.addEventListener("load", () => {
-            //     document.querySelector(".nowloading").style.display = "none";
-            //     document.querySelector("#loading__name").style.display = "block";
-            // });
+            window.addEventListener("load", () => {
+                document.querySelector(".nowloading").style.display = "none";
+                document.querySelector("#loading__name").style.display = "block";
+            });
         </script>
     </head>
     <body>
@@ -30,8 +30,8 @@
                     </ul>
                 </nav>
                 <div class="clock">
-                    <strong>AM 00:00</strong>
-                    <span>Friday, 27, Dec, 2024 (GMT+9)</span>
+                    <strong id="clock"></strong>
+                    <span id="clock-date"></span>
                 </div>
             </header>
 
@@ -54,14 +54,18 @@
                             <span id="name02">Heedo, Jung</span>
                         </div>
                         <div class="section1-bottom__contents">
-                            <span>Studied hard</span>
+                            <div class="section1-textwrap">
+                                <span id="studiedhard">Studied hard</span>
+                            </div>
                             <div class="section1-spanwrap">
                                 <span class="section1-words section1-words-design">DESIGN</span>
                                 <span class="section1-words section1-words-skills">SKILLS</span>
                                 <span class="section1-words section1-words-tools">TOOLS</span>
                                 <span class="section1-words section1-words-dynamicFunctions">DYNAMIC FUNCTIONS</span>
                             </div>
-                            <span>for better experience</span>
+                            <div class="section1-textwrap">
+                                <span id="forbetter">for better experience</span>
+                            </div>
                         </div>
                     </div>
                     <div class="section1-horizon__line"></div>
@@ -248,7 +252,6 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
         <script src="https://unpkg.com/split-type"></script>
-        <!-- <script src="./assets/js/loading.js"></script> -->
         <script src="./assets/js/landing.js"></script>
         <script src="./assets/js/main.js"></script>
         <script src="./assets/js/header.js"></script>

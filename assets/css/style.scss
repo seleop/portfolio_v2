@@ -37,6 +37,7 @@ li {
 .section1 {
     position: relative;
     height: 100vh;
+    background-color: $porfolio--color--white;
     .section1-middle {
         position: absolute;
         top: 50%;
@@ -49,7 +50,7 @@ li {
             font-size: 320px;
             text-wrap: nowrap;
             mix-blend-mode: hard-light;
-            color: $porfolio--color--white;
+            color: $porfolio--color--black;
             opacity: 1;
             z-index: 10;
         }
@@ -100,12 +101,19 @@ li {
                 font-family: "NHDisplayLight";
                 font-size: 50px;
                 line-height: 50px;
+                overflow: hidden;
+                .section1-textwrap{
+                    overflow: hidden;
+                }
                 .section1-spanwrap {
+                    margin-top: 0.4rem;
+                    height: 50px;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
                     align-items: end;
                     span {
+                        padding-right: 0.4rem;
                         font-style: italic;
                         color: $porfolio--color--blue;
                     }

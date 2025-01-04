@@ -103,6 +103,7 @@ li {
 .section1 {
   position: relative;
   height: 100vh;
+  background-color: #fcfcfc;
 }
 .section1 .section1-middle {
   position: absolute;
@@ -117,7 +118,7 @@ li {
   font-size: 320px;
   text-wrap: nowrap;
   mix-blend-mode: hard-light;
-  color: #fcfcfc;
+  color: #000;
   opacity: 1;
   z-index: 10;
 }
@@ -134,8 +135,7 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section1 .section1-bottom__container {
   width: 100vw;
@@ -170,14 +170,21 @@ li {
   font-family: "NHDisplayLight";
   font-size: 50px;
   line-height: 50px;
+  overflow: hidden;
+}
+.section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents .section1-textwrap {
+  overflow: hidden;
 }
 .section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents .section1-spanwrap {
+  margin-top: 0.4rem;
+  height: 50px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   align-items: end;
 }
 .section1 .section1-bottom__container .section1-bottom__top .section1-bottom__contents .section1-spanwrap span {
+  padding-right: 0.4rem;
   font-style: italic;
   color: #15F5BA;
 }
@@ -209,8 +216,7 @@ li {
   top: 0;
   left: 0;
   z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .section2 {
@@ -235,8 +241,7 @@ li {
 .section2 .section2-appeal .section2-appeal__line .section2_decoblock video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section2 .section2-appeal .section2-appeal__line .section2_decoblock01 {
   width: 800px;
@@ -271,8 +276,7 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 36px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section3 .section3-inner .section3-inner-sentences {
   display: flex;
@@ -321,4 +325,4 @@ li {
   border: 1px solid #15F5BA;
   border-radius: 500px;
   color: #15F5BA;
-}/*# sourceMappingURL=style.css.map */
+}
