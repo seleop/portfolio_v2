@@ -12,7 +12,6 @@ const landing = () => {
     const subCon03 = new SplitType("#subcontents3", { type: "chars" });
     const subCon04 = new SplitType("#studiedhard", { type: "chars" });
     const subCon05 = new SplitType("#forbetter", { type: "chars" });
-
     let pointWord = gsap.timeline();
     pointWord.to(greeting.chars, { duration: 0.5, ease: "expo.out", y: -200, opacity: 1 });
     pointWord.to(greeting.chars, {
@@ -156,7 +155,8 @@ const loading = () => {
         ease: "power1.out",
     });
 };
+// loading();
+// setTimeout(landing, 2900)
 
-loading();
-setTimeout(landing, 2900)
+landing();
 slowVideo();
