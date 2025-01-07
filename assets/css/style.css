@@ -97,7 +97,7 @@ li {
   z-index: 0;
   display: block;
   min-height: 100vh;
-  background-color: #121212;
+  background-color: #000;
 }
 
 .section1 {
@@ -190,7 +190,7 @@ li {
 }
 .section1 .section1-bottom__container .section1-horizon__line {
   position: relative;
-  width: 100%;
+  width: 0%;
   height: 1px;
   left: 50%;
   transform: translateX(-50%);
@@ -220,12 +220,15 @@ li {
 }
 
 .section2 {
-  background-color: #fcfcfc;
+  margin: 300px 0;
+  background-color: #E55901;
+  display: flex;
+  align-items: center;
+  padding: 700px 0;
 }
 .section2 .section2-appeal {
   display: flex;
   flex-direction: column;
-  padding: 500px 0;
 }
 .section2 .section2-appeal .section2-appeal__line {
   display: flex;

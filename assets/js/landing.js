@@ -21,17 +21,77 @@ const landing = () => {
         y: -360,
         color: "#15F5BA",
         stagger: { each: 0.03, from: "center" },
+        onComplete: () => {
+            gsap.fromTo(
+                greeting.chars,
+                {
+                    y: -360,
+                    fontSize: "220PX",
+                },
+                {
+                    scrollTrigger: {
+                        trigger: "#name01",
+                        start: "center+=200 center",
+                        end: "center+=800 top",
+                        scrub: true,
+                    },
+                    y: -220,
+                    stagger: 0.1,
+                    fontSize: "300px",
+                    rotateX: "360deg",
+                    color: "#E55901",
+                    ease: CustomEase.create("custom", vezier),
+                }
+            );
+        },
     });
+    gsap.fromTo(
+        greeting.chars,
+        {
+            y: -220,
+        },
+        {
+            scrollTrigger: {
+                trigger: "#name01",
+                start: "center+=1600 center",
+                end: "center+=2500 top",
+                scrub: 0.5,
+                markers: true,
+            },
+            duration: 0.5,
+            yPercent: 300,
+        }
+    );
     gsap.to(".section1", {
         duration: 1,
         delay: 0.5,
         backgroundColor: "transparent",
     });
-    gsap.from(".section1-horizon__line", {
+    gsap.to(".section1-horizon__line", {
         duration: 1,
-        width: "0%",
+        width: "100%",
         delay: 1.2,
         ease: "power3.out",
+        onComplete: () => {
+            gsap.fromTo(
+                ".section1-horizon__line",
+                {
+                    width: "100%",
+                },
+                {
+                    scrollTrigger: {
+                        trigger: "#name01",
+                        start: "center center+=20%",
+                        end: "center top",
+                        scrub: true,
+                    },
+                    delay: 0.15,
+                    duration: 1,
+                    width: "0%",
+                    ease: CustomEase.create("custom", vezier),
+                }
+            );
+        },
     });
     gsap.from("header", {
         duration: 1,

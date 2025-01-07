@@ -12,10 +12,13 @@ header {
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
-header.active {
+header.on {
   height: 100px;
   color: #fcfcfc;
   background-color: #000;
+  transition: 0.3s;
+}
+header.off {
   transition: 0.3s;
 }
 header #logo {

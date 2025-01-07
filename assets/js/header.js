@@ -2,10 +2,12 @@ const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY >= 10) {
-        header.classList.add("active");
+        header.classList.add("on");
+        header.classList.add("off");
         console.log("active");
     } else {
-        header.classList.remove("active");
+        header.classList.remove("on");
+        header.classList.add("off");
     }
 });
 
