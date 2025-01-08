@@ -31,7 +31,7 @@ li {
     z-index: 0;
     display: block;
     min-height: 100vh;
-    background-color: $porfolio--color--black;
+    background-color: $porfolio--color--dark;
 }
 
 .section1 {
@@ -154,53 +154,109 @@ li {
 }
 
 .section2 {
-    margin: 300px 0;
-    background-color: $porfolio--color--orange;
+    margin: 300px 0 0 0;
     display: flex;
     align-items: center;
-    padding: 700px 0;
+    padding: 500px 0;
+    background-color: $porfolio--color--orange;
+    color: $porfolio--color--dark;
+    fill : $porfolio--color--dark;
     .section2-appeal {
         display: flex;
         flex-direction: column;
         .section2-appeal__line {
             display: flex;
+            gap: 1.4rem;
             align-items: center;
             font-family: "NHDisplayMideum";
-            font-size: 150px;
-            line-height: 100px;
-            color: $porfolio--color--black;
-            .section2_decoblock {
-                height: 110px;
-                video {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+            font-size: 180px;
+            line-height: 160px;
+            // text-transform: lowercase;
+            overflow: hidden;
+            .section2-videowrap{
+                overflow: hidden;
+                .section2--videobox{
+                    width: 440px;
+                    height: 130px;
+                    line-height: 110px;
+                    video {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                }
+                .videobox2{
+                    width: 900px;
+                }
+                .videobox3{
+                    width: 800px;
                 }
             }
-            .section2_decoblock01 {
-                width: 800px;
+            .section2-spanwrap{
+                overflow: hidden;
+                span {
+                    display: block;
+                }
             }
         }
-        .appeal__line02 {
-            .section2-appeal__horizon-line {
-                width: 500px;
-                height: 5px;
-                background-color: $porfolio--color--black;
+        .appeal__line02{
+            .section2--videobox {
+                width: 745px;
             }
-            .section2_decoblock02 {
-                width: 400px;
+        }
+        .appeal__line04{
+            .section2--videobox{
+                width: 790px;
             }
+            .section2-square {
+                width: 218px;
+                height: 130px;
+                background-color: $porfolio--color--white;
+            }
+        }
+        .appeal__line05 {
+            .section2-horizon__line {
+                width: 10px;
+                height: 15px;
+                transition: .3s;
+                background-color: $porfolio--color--white;
+            }
+        }
+        .multifly {
+            transition: .3s;
         }
     }
 }
 
 .section3 {
-    padding: 400px 0;
+    padding: 200px 0;
+    background-color: $porfolio--color--dark;
     .section3-inner {
         position: relative;
-        font-family: "NHDisplayLight";
-        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        font-family: 'pretendard';
+        padding-left: 60px;
         color: $porfolio--color--white;
+        justify-content: center;
+        .section3-title{
+            display: flex;
+            overflow: hidden;
+            h2 {
+                font-size: 140px;
+                color: $porfolio--color--white;
+                transition: .1s;
+            }
+        }
+        .section3-inner-sentences{
+            display: flex;
+            flex-direction: column;
+            li {
+                font-size: 50px;
+                overflow: hidden;
+            }
+        }
         .section3-img {
             position: absolute;
             top: 50%;
@@ -211,29 +267,17 @@ li {
             img {
                 width: 100%;
                 height: 100%;
-                border-radius: 36px;
+                border-radius: 40px;
                 object-fit: cover;
-            }
-        }
-        .section3-inner-sentences {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .last-sentence {
-                display: flex;
-                .section3-inner-block {
-                    display: flex;
-                    align-items: center;
-                    color: $porfolio--color--blue;
-                    font-family: "Caveat";
-                }
+                filter: grayscale(1);
             }
         }
     }
 }
 
 .section4 {
-    padding: 200px 0;
+    padding: 120px 0 100px 0;
+    background-color: $porfolio--color--dark;
     .section4-container {
         display: flex;
         justify-content: space-between;
@@ -259,6 +303,45 @@ li {
                     padding: 33px 110px;
                     border: 1px solid $porfolio--color--blue;
                     border-radius: 500px;
+                    color: $porfolio--color--blue;
+                }
+            }
+        }
+        .section4-rightblock{
+            width: 50%;
+            font-size: 94px;
+            font-family: "DMSans";
+            color: $porfolio--color--white;
+            font-weight: 700;
+            line-height: 86px;
+            .section4-rightblock-line{
+                display: flex;
+                overflow: hidden;
+            }
+            .section4-rightblock-line1{
+                justify-content: flex-start;
+            }
+            .section4-rightblock-line2{
+                justify-content: space-between;
+            }
+            .section4-rightblock-line3{
+                justify-content: flex-start;
+                gap: 2rem;
+            }
+            .section4-rightblock-line4{
+                justify-content: space-between;
+                gap: 2rem;
+            }
+            .section4-rightblock-line5{
+                justify-content: space-between;
+            }
+            .section4-rightblock-line6, .section4-rightblock-line7, .section4-rightblock-line8{
+                justify-content: flex-start;
+                color: $porfolio--color--blue;
+            }
+            .section4-rightblock-line9{
+                justify-content: space-between;
+                #creative {
                     color: $porfolio--color--blue;
                 }
             }

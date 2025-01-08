@@ -42,6 +42,14 @@
     box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
   }
 }
+@keyframes rotateMultifly {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @font-face {
   font-family: "pretendard";
   src: url(../font/PretendardJPVariable.ttf);
@@ -70,6 +78,10 @@
   font-family: "Caveat";
   src: url(../font/Caveat-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "DMSans";
+  src: url(../font/DMSans-VariableFont_opsz\,wght.ttf);
+}
 /* 로딩 화면 스타일*/
 /* 헤더 스타일 */
 * {
@@ -97,7 +109,7 @@ li {
   z-index: 0;
   display: block;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #121212;
 }
 
 .section1 {
@@ -135,7 +147,8 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .section1 .section1-bottom__container {
   width: 100vw;
@@ -216,15 +229,18 @@ li {
   top: 0;
   left: 0;
   z-index: -1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section2 {
-  margin: 300px 0;
-  background-color: #E55901;
+  margin: 300px 0 0 0;
   display: flex;
   align-items: center;
-  padding: 700px 0;
+  padding: 500px 0;
+  background-color: #E55901;
+  color: #121212;
+  fill: #121212;
 }
 .section2 .section2-appeal {
   display: flex;
@@ -232,40 +248,90 @@ li {
 }
 .section2 .section2-appeal .section2-appeal__line {
   display: flex;
+  gap: 1.4rem;
   align-items: center;
   font-family: "NHDisplayMideum";
-  font-size: 150px;
-  line-height: 100px;
-  color: #000;
+  font-size: 180px;
+  line-height: 160px;
+  overflow: hidden;
 }
-.section2 .section2-appeal .section2-appeal__line .section2_decoblock {
-  height: 110px;
+.section2 .section2-appeal .section2-appeal__line .section2-videowrap {
+  overflow: hidden;
 }
-.section2 .section2-appeal .section2-appeal__line .section2_decoblock video {
+.section2 .section2-appeal .section2-appeal__line .section2-videowrap .section2--videobox {
+  width: 440px;
+  height: 130px;
+  line-height: 110px;
+}
+.section2 .section2-appeal .section2-appeal__line .section2-videowrap .section2--videobox video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
-.section2 .section2-appeal .section2-appeal__line .section2_decoblock01 {
+.section2 .section2-appeal .section2-appeal__line .section2-videowrap .videobox2 {
+  width: 900px;
+}
+.section2 .section2-appeal .section2-appeal__line .section2-videowrap .videobox3 {
   width: 800px;
 }
-.section2 .section2-appeal .appeal__line02 .section2-appeal__horizon-line {
-  width: 500px;
-  height: 5px;
-  background-color: #000;
+.section2 .section2-appeal .section2-appeal__line .section2-spanwrap {
+  overflow: hidden;
 }
-.section2 .section2-appeal .appeal__line02 .section2_decoblock02 {
-  width: 400px;
+.section2 .section2-appeal .section2-appeal__line .section2-spanwrap span {
+  display: block;
+}
+.section2 .section2-appeal .appeal__line02 .section2--videobox {
+  width: 745px;
+}
+.section2 .section2-appeal .appeal__line04 .section2--videobox {
+  width: 790px;
+}
+.section2 .section2-appeal .appeal__line04 .section2-square {
+  width: 218px;
+  height: 130px;
+  background-color: #fcfcfc;
+}
+.section2 .section2-appeal .appeal__line05 .section2-horizon__line {
+  width: 10px;
+  height: 15px;
+  transition: 0.3s;
+  background-color: #fcfcfc;
+}
+.section2 .section2-appeal .multifly {
+  transition: 0.3s;
 }
 
 .section3 {
-  padding: 400px 0;
+  padding: 200px 0;
+  background-color: #121212;
 }
 .section3 .section3-inner {
   position: relative;
-  font-family: "NHDisplayLight";
-  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  font-family: "pretendard";
+  padding-left: 60px;
   color: #fcfcfc;
+  justify-content: center;
+}
+.section3 .section3-inner .section3-title {
+  display: flex;
+  overflow: hidden;
+}
+.section3 .section3-inner .section3-title h2 {
+  font-size: 140px;
+  color: #fcfcfc;
+  transition: 0.1s;
+}
+.section3 .section3-inner .section3-inner-sentences {
+  display: flex;
+  flex-direction: column;
+}
+.section3 .section3-inner .section3-inner-sentences li {
+  font-size: 50px;
+  overflow: hidden;
 }
 .section3 .section3-inner .section3-img {
   position: absolute;
@@ -278,26 +344,15 @@ li {
 .section3 .section3-inner .section3-img img {
   width: 100%;
   height: 100%;
-  border-radius: 36px;
-  object-fit: cover;
-}
-.section3 .section3-inner .section3-inner-sentences {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.section3 .section3-inner .section3-inner-sentences .last-sentence {
-  display: flex;
-}
-.section3 .section3-inner .section3-inner-sentences .last-sentence .section3-inner-block {
-  display: flex;
-  align-items: center;
-  color: #15F5BA;
-  font-family: "Caveat";
+  border-radius: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(1);
 }
 
 .section4 {
-  padding: 200px 0;
+  padding: 120px 0 100px 0;
+  background-color: #121212;
 }
 .section4 .section4-container {
   display: flex;
@@ -329,3 +384,42 @@ li {
   border-radius: 500px;
   color: #15F5BA;
 }
+.section4 .section4-container .section4-rightblock {
+  width: 50%;
+  font-size: 94px;
+  font-family: "DMSans";
+  color: #fcfcfc;
+  font-weight: 700;
+  line-height: 86px;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line {
+  display: flex;
+  overflow: hidden;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line1 {
+  justify-content: flex-start;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line2 {
+  justify-content: space-between;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line3 {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line4 {
+  justify-content: space-between;
+  gap: 2rem;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line5 {
+  justify-content: space-between;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line6, .section4 .section4-container .section4-rightblock .section4-rightblock-line7, .section4 .section4-container .section4-rightblock .section4-rightblock-line8 {
+  justify-content: flex-start;
+  color: #15F5BA;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line9 {
+  justify-content: space-between;
+}
+.section4 .section4-container .section4-rightblock .section4-rightblock-line9 #creative {
+  color: #15F5BA;
+}/*# sourceMappingURL=style.css.map */

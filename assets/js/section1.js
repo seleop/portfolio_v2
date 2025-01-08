@@ -1,10 +1,12 @@
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CustomEase);
+
 const scrollSection1 = () => {
     ScrollTrigger.create({
         trigger: ".section1",
         start: "top top",
         end: "+=200%",
         pin: true,
-        anticipatePin: 1,
         scrub: true,
     });
     gsap.to(".section1-bottom__name > span", {
@@ -53,7 +55,7 @@ const scrollSection1 = () => {
         },
         scale: 1.7,
         brightness : 1.5,
-        ease: CustomEase.create("custom", vezier),
+        ease: "expo.out",
     })
     gsap.to("#section1img", {
         scrollTrigger: {
@@ -74,7 +76,6 @@ const scrollSection1 = () => {
                 start: "center+=1600 center",
                 end: "center+=2500 top",
                 scrub: 0.5,
-                markers: true,
             },
             duration: 0.5,
             backgroundPosition: "50% 0px"

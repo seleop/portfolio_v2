@@ -1,6 +1,7 @@
 const slowVideo = () => {
     const section1Video = document.querySelector(".section1_bg_video");
     section1Video.playbackRate = 0.8;
+    document.querySelector("#videobox1").playbackRate = 0.5;
 };
 
 const landing = () => {
@@ -13,7 +14,6 @@ const landing = () => {
     const subCon04 = new SplitType("#studiedhard", { type: "chars" });
     const subCon05 = new SplitType("#forbetter", { type: "chars" });
     let pointWord = gsap.timeline();
-    pointWord.to(greeting.chars, { duration: 0.5, ease: "expo.out", y: -200, opacity: 1 });
     pointWord.to(greeting.chars, {
         duration: 2,
         ease: "power3.out",
@@ -56,17 +56,23 @@ const landing = () => {
                 start: "center+=1600 center",
                 end: "center+=2500 top",
                 scrub: 0.5,
-                markers: true,
             },
             duration: 0.5,
             yPercent: 300,
         }
     );
-    gsap.to(".section1", {
-        duration: 1,
-        delay: 0.5,
-        backgroundColor: "transparent",
-    });
+    gsap.to(
+        greeting.chars,
+        {
+            scrollTrigger: {
+                trigger: "#name01",
+                start: "center+=2550 center",
+                end: "center+=2600 top",
+                scrub:true,
+            },
+            opacity: 0,
+        }
+    );
     gsap.to(".section1-horizon__line", {
         duration: 1,
         width: "100%",
@@ -215,8 +221,8 @@ const loading = () => {
         ease: "power1.out",
     });
 };
-// loading();
-// setTimeout(landing, 2900)
+loading();
+setTimeout(landing, 2900)
 
-landing();
+// landing();
 slowVideo();

@@ -7,7 +7,7 @@ const settingScroll = () => {
     });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {
-        lenis.raf(time * 600);
+        lenis.raf(time * 300);
     });
     gsap.ticker.lagSmoothing(0);
 };
