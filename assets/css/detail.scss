@@ -1,0 +1,85 @@
+@import "./variables";
+
+.section6-detail {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 593px;
+    height: 324px;
+    border-radius: 25px;
+    .detail-bgr {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .detail-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        bottom: 0%;
+        right: 0%;
+        .detail-context {
+            height: 420px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: absolute;
+            top: 50%;
+            right: 60%;
+            transform: translateY(-50%);
+            text-wrap: nowrap;
+            opacity: 0;
+            .detail-title {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                color: $porfolio--color--white;
+                h2 {
+                    font-family: "optima";
+                }
+                strong {
+                    font-family: "pretendard";
+                    font-weight: 600;
+                }
+                font-size: 24px;
+            }
+            .detail-explanation {
+                p {
+                    font-family: "pretendard";
+                    font-size: 18px;
+                    line-height: 28px;
+                    font-weight: 300;
+                    color: $porfolio--color--white;
+                }
+            }
+            .detail-link{
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                span {
+                    font-family: "NHDisplayMideum";
+                    font-size: 16px;
+                }
+            }
+        }
+        .detail-img {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 593px;
+            height: 324px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+    }
+}

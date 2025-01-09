@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "./loading.css";
 @import "./header.css";
+@import "./detail.css";
 @keyframes nowloading {
   0% {
     box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
@@ -42,12 +43,12 @@
     box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
   }
 }
-@keyframes rotateMultifly {
+@keyframes moveHorizon {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(0%);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(-100%);
   }
 }
 @font-face {
@@ -75,6 +76,10 @@
   src: url(../font/NeueHaasDisplayMediu.ttf);
 }
 @font-face {
+  font-family: "NHDisplayBold";
+  src: url(../font/NeueHaasDisplayBold.ttf);
+}
+@font-face {
   font-family: "Caveat";
   src: url(../font/Caveat-VariableFont_wght.ttf);
 }
@@ -82,8 +87,13 @@
   font-family: "DMSans";
   src: url(../font/DMSans-VariableFont_opsz\,wght.ttf);
 }
+@font-face {
+  font-family: "optima";
+  src: url(../font/OptimaDisplay_Light.otf);
+}
 /* 로딩 화면 스타일*/
 /* 헤더 스타일 */
+/* 디테일 창 스타일 */
 * {
   margin: 0;
   padding: 0;
@@ -322,7 +332,7 @@ li {
 }
 .section3 .section3-inner .section3-title h2 {
   font-size: 140px;
-  color: #fcfcfc;
+  color: #E55901;
   transition: 0.1s;
 }
 .section3 .section3-inner .section3-inner-sentences {
@@ -413,7 +423,9 @@ li {
 .section4 .section4-container .section4-rightblock .section4-rightblock-line5 {
   justify-content: space-between;
 }
-.section4 .section4-container .section4-rightblock .section4-rightblock-line6, .section4 .section4-container .section4-rightblock .section4-rightblock-line7, .section4 .section4-container .section4-rightblock .section4-rightblock-line8 {
+.section4 .section4-container .section4-rightblock .section4-rightblock-line6,
+.section4 .section4-container .section4-rightblock .section4-rightblock-line7,
+.section4 .section4-container .section4-rightblock .section4-rightblock-line8 {
   justify-content: flex-start;
   color: #15F5BA;
 }
@@ -422,4 +434,116 @@ li {
 }
 .section4 .section4-container .section4-rightblock .section4-rightblock-line9 #creative {
   color: #15F5BA;
+}
+
+/* section5 */
+.bandsection .bandsection-horizonLine {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.bandsection .bandsection-horizonLine:hover {
+  border-top: 1px solid #fcfcfc;
+  border-bottom: 1px solid #fcfcfc;
+  background-color: #12c797;
+}
+.bandsection .bandsection-horizonLine:hover .bandsection-innertext {
+  animation: moveHorizon 40s linear infinite;
+}
+.bandsection .bandsection-horizonLine:hover .bandsection-innertext span {
+  color: #fcfcfc;
+}
+.bandsection .bandsection-horizonLine:hover .bandsection-innertext svg {
+  fill: #fcfcfc;
+}
+.bandsection .bandsection-horizonLine .bandsection-innertext {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.bandsection .bandsection-horizonLine .bandsection-innertext span {
+  font-family: "NHDisplayRoman";
+  font-size: 90px;
+  line-height: 80px;
+  color: #292929;
+  text-wrap: nowrap;
+}
+.bandsection .bandsection-horizonLine .bandsection-innertext svg {
+  fill: #292929;
+}
+
+/* section6 */
+.worksection {
+  padding: 500px 150px;
+}
+.worksection .worksection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+}
+.worksection .worksection-container .worksection-workplace {
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #fcfcfc;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner {
+  display: flex;
+  justify-content: space-between;
+  color: #fcfcfc;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-number span {
+  font-family: "NHDisplayMideum";
+  line-height: 28px;
+  font-size: 24px;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description .inner-description-worktitle h3 {
+  font-family: "optima";
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 200;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description .inner-description-workcontext p {
+  font-family: "pretendard";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-image {
+  position: relative;
+  width: 593px;
+  height: 324px;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 26px;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-icon a svg {
+  fill: #fcfcfc;
+}
+.worksection .worksection-container .worksection-workplace #jheedo {
+  font-family: "NHDisplayMideum";
+}
+.worksection .worksection-container .worksection-workplace #lenovo {
+  font-family: "Montserrat";
+  font-weight: 200;
+}
+.worksection .worksection-container .worksection-title h2 { /* title */
+  font-family: "NHDisplayBold";
+  font-size: 38px;
+  color: #fcfcfc;
 }/*# sourceMappingURL=style.css.map */

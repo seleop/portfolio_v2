@@ -18,7 +18,7 @@ const moveWords = () => {
     gsap.to("#section3title", {
         scrollTrigger:settings,
         fontSize : "80px",
-        color : "#E55901",
+        color : "#15F5BA",
         ease: CustomEase.create("custom", vezier),
     })
     gsap.to(".section3-inner", {

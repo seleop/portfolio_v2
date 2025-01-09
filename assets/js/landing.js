@@ -221,8 +221,8 @@ const loading = () => {
         ease: "power1.out",
     });
 };
-loading();
-setTimeout(landing, 2900)
+// loading();
+// setTimeout(landing, 2900)
 
-// landing();
+landing();
 slowVideo();

@@ -1,7 +1,7 @@
 ScrollTrigger.create({
     trigger:".section4",
     start:"top top",
-    end:"+=50%",
+    end:"+=40%",
     pin:true,
     scrub: true,
 })
@@ -23,6 +23,8 @@ spans.forEach((span) => {
 const afterSettings = {
     trigger : ".section4-rightblock-line1",
     start :"bottom+=750 bottom",
+    end :"bottom+=1100 bottom",
+    scrub : true,
 }
 
 gsap.from("#gladtolearn",{
@@ -30,7 +32,7 @@ gsap.from("#gladtolearn",{
     x : () => {
         return (document.querySelector(".section4-rightblock-line1").offsetWidth - document.querySelector("#gladtolearn").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     ease: CustomEase.create("custom", vezier),
 })
 gsap.from("#new",{
@@ -38,7 +40,7 @@ gsap.from("#new",{
     x : () => {
         return (document.querySelector(".section4-rightblock-line2").offsetWidth - document.querySelector("#something").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     ease: CustomEase.create("custom", vezier),
 })
 gsap.from("#meeting",{
@@ -46,7 +48,7 @@ gsap.from("#meeting",{
     x : () => {
         return (document.querySelector("#meeting").offsetWidth - document.querySelector("#like").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     ease: CustomEase.create("custom", vezier),
 })
 gsap.to("#new2",{
@@ -54,7 +56,7 @@ gsap.to("#new2",{
     x : () => {
         return document.querySelector("#new2").offsetWidth / 1.5
     },
-    duration:1,
+    // duration:1,
     ease: CustomEase.create("custom", vezier),
 })
 gsap.to("#people",{
@@ -62,7 +64,7 @@ gsap.to("#people",{
     x : () => {
         return -( document.querySelector("#new2").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     ease: CustomEase.create("custom", vezier),
 })
 gsap.from("#my",{
@@ -70,7 +72,7 @@ gsap.from("#my",{
     x : () => {
         return ( document.querySelector("#new2").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     ease: CustomEase.create("custom", vezier),
 })
 gsap.from("#communicate",{
@@ -78,7 +80,7 @@ gsap.from("#communicate",{
     x : () => {
         return (document.querySelector(".section4-rightblock-line2").offsetWidth -  document.querySelector("#communicate").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     delay:0.1,
     color:"#fcfcfc",
     ease: CustomEase.create("custom", vezier),
@@ -88,7 +90,7 @@ gsap.from("#passionate",{
     x : () => {
         return (document.querySelector(".section4-rightblock-line2").offsetWidth -  document.querySelector("#passionate").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     delay:0.2,
     color:"#fcfcfc",
     ease: CustomEase.create("custom", vezier),
@@ -98,7 +100,7 @@ gsap.from("#flexible",{
     x : () => {
         return (document.querySelector(".section4-rightblock-line2").offsetWidth -  document.querySelector("#flexible").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     delay:0.3,
     color:"#fcfcfc",
     ease: CustomEase.create("custom", vezier),
@@ -108,16 +110,23 @@ gsap.from("#and",{
     x : () => {
         return (document.querySelector(".section4-rightblock-line2").offsetWidth - document.querySelector("#and").offsetWidth)
     },
-    duration:1,
+    // duration:1,
     delay:0.4,
     ease: CustomEase.create("custom", vezier),
 })
 gsap.from(creative.chars,{
-    scrollTrigger:afterSettings,
-    y:100,
-    duration:1,
-    delay:0.5,
-    stagger:0.1,
+    scrollTrigger:{
+        trigger : ".section4-rightblock-line1",
+        start :"bottom+=900 bottom",
+        end :"bottom+=1150 bottom",
+        scrub : true,
+    },
+    x : () => {
+        return document.querySelector("#creative").offsetWidth
+    },
+    // duration:1,
+    delay:1.5,
+    stagger:0.05,
     color:"#fcfcfc",
     ease: CustomEase.create("custom", vezier),
 })

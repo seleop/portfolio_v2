@@ -6,6 +6,9 @@
 @import "./loading.css";
 /* 헤더 스타일 */
 @import "./header.css";
+/* 디테일 창 스타일 */
+@import "./detail.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -102,7 +105,7 @@ li {
                 font-size: 50px;
                 line-height: 50px;
                 overflow: hidden;
-                .section1-textwrap{
+                .section1-textwrap {
                     overflow: hidden;
                 }
                 .section1-spanwrap {
@@ -160,7 +163,7 @@ li {
     padding: 500px 0;
     background-color: $porfolio--color--orange;
     color: $porfolio--color--dark;
-    fill : $porfolio--color--dark;
+    fill: $porfolio--color--dark;
     .section2-appeal {
         display: flex;
         flex-direction: column;
@@ -173,9 +176,9 @@ li {
             line-height: 160px;
             // text-transform: lowercase;
             overflow: hidden;
-            .section2-videowrap{
+            .section2-videowrap {
                 overflow: hidden;
-                .section2--videobox{
+                .section2--videobox {
                     width: 440px;
                     height: 130px;
                     line-height: 110px;
@@ -186,27 +189,27 @@ li {
                         border-radius: 10px;
                     }
                 }
-                .videobox2{
+                .videobox2 {
                     width: 900px;
                 }
-                .videobox3{
+                .videobox3 {
                     width: 800px;
                 }
             }
-            .section2-spanwrap{
+            .section2-spanwrap {
                 overflow: hidden;
                 span {
                     display: block;
                 }
             }
         }
-        .appeal__line02{
+        .appeal__line02 {
             .section2--videobox {
                 width: 745px;
             }
         }
-        .appeal__line04{
-            .section2--videobox{
+        .appeal__line04 {
+            .section2--videobox {
                 width: 790px;
             }
             .section2-square {
@@ -219,12 +222,12 @@ li {
             .section2-horizon__line {
                 width: 10px;
                 height: 15px;
-                transition: .3s;
+                transition: 0.3s;
                 background-color: $porfolio--color--white;
             }
         }
         .multifly {
-            transition: .3s;
+            transition: 0.3s;
         }
     }
 }
@@ -236,20 +239,20 @@ li {
         position: relative;
         display: flex;
         flex-direction: column;
-        font-family: 'pretendard';
+        font-family: "pretendard";
         padding-left: 60px;
         color: $porfolio--color--white;
         justify-content: center;
-        .section3-title{
+        .section3-title {
             display: flex;
             overflow: hidden;
             h2 {
                 font-size: 140px;
-                color: $porfolio--color--white;
-                transition: .1s;
+                color: $porfolio--color--orange;
+                transition: 0.1s;
             }
         }
-        .section3-inner-sentences{
+        .section3-inner-sentences {
             display: flex;
             flex-direction: column;
             li {
@@ -307,43 +310,170 @@ li {
                 }
             }
         }
-        .section4-rightblock{
+        .section4-rightblock {
             width: 50%;
             font-size: 94px;
             font-family: "DMSans";
             color: $porfolio--color--white;
             font-weight: 700;
             line-height: 86px;
-            .section4-rightblock-line{
+            .section4-rightblock-line {
                 display: flex;
                 overflow: hidden;
             }
-            .section4-rightblock-line1{
+            .section4-rightblock-line1 {
                 justify-content: flex-start;
             }
-            .section4-rightblock-line2{
+            .section4-rightblock-line2 {
                 justify-content: space-between;
             }
-            .section4-rightblock-line3{
+            .section4-rightblock-line3 {
                 justify-content: flex-start;
                 gap: 2rem;
             }
-            .section4-rightblock-line4{
+            .section4-rightblock-line4 {
                 justify-content: space-between;
                 gap: 2rem;
             }
-            .section4-rightblock-line5{
+            .section4-rightblock-line5 {
                 justify-content: space-between;
             }
-            .section4-rightblock-line6, .section4-rightblock-line7, .section4-rightblock-line8{
+            .section4-rightblock-line6,
+            .section4-rightblock-line7,
+            .section4-rightblock-line8 {
                 justify-content: flex-start;
                 color: $porfolio--color--blue;
             }
-            .section4-rightblock-line9{
+            .section4-rightblock-line9 {
                 justify-content: space-between;
                 #creative {
                     color: $porfolio--color--blue;
                 }
+            }
+        }
+    }
+}
+
+/* section5 */
+.bandsection {
+    .bandsection-horizonLine {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        background-color: $porfolio--color--dark;
+        border-top: 1px solid $porfolio--color--lightblack;
+        border-bottom: 1px solid $porfolio--color--lightblack;
+        &:hover {
+            border-top: 1px solid $porfolio--color--white;
+            border-bottom: 1px solid $porfolio--color--white;
+            background-color: $porfolio--color--darkblue;
+        }
+        &:hover .bandsection-innertext {
+            animation: moveHorizon 40s linear infinite;
+        }
+        &:hover .bandsection-innertext span{
+            color: $porfolio--color--white;
+        }
+        &:hover .bandsection-innertext svg{
+            fill: $porfolio--color--white;
+        }
+        .bandsection-innertext {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            span {
+                font-family: "NHDisplayRoman";
+                font-size: 90px;
+                line-height: 80px;
+                color: $porfolio--color--lightdark;
+                text-wrap: nowrap;
+            }
+            svg {
+                fill: $porfolio--color--lightdark;
+            }
+        }
+    }
+}
+
+/* section6 */
+.worksection {
+    padding: 500px 150px;
+    .worksection-container {
+        display: flex;
+        flex-direction: column;
+        gap: 300px;
+        .worksection-workplace{
+            display: flex;
+            flex-direction: column;
+            gap: 300px;
+            .worksection-workplace-work{
+                padding-bottom: 30px;
+                border-bottom: 1px solid $porfolio--color--white;
+                .workplace-work-inner{
+                    display: flex;
+                    justify-content: space-between;
+                    color: $porfolio--color--white;
+                    .work-inner-number{
+                        span{
+                            font-family: "NHDisplayMideum";
+                            line-height: 28px;
+                            font-size: 24px;
+                        }
+                    }
+                    .work-inner-description{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        .inner-description-worktitle{
+                            h3 {
+                                font-family: "optima";
+                                font-size: 50px;
+                                line-height: 50px;
+                                font-weight: 200;
+                            }
+                        }
+                        .inner-description-workcontext{
+                            p {
+                                font-family: 'pretendard';
+                                font-weight: 500;
+                                font-size: 18px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                    .work-inner-image{
+                        position: relative;
+                        width: 593px;
+                        height: 324px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 26px;
+                        }
+                    }
+                    .work-inner-icon{
+                        a {
+                            svg {
+                                fill : $porfolio--color--white
+                            }
+                        }
+                    }
+                }
+            }
+            #jheedo {
+                font-family: "NHDisplayMideum";
+            }
+            #lenovo{
+                font-family: 'Montserrat';
+                font-weight: 200;
+            }
+        }
+        .worksection-title{
+            h2 { /* title */
+                font-family: "NHDisplayBold";
+                font-size: 38px;
+                color: $porfolio--color--white;
             }
         }
     }
