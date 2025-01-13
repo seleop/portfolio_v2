@@ -58,13 +58,22 @@
                     color: $porfolio--color--white;
                 }
             }
+
             .detail-link{
                 display: flex;
                 align-items: center;
                 gap: 2rem;
-                span {
-                    font-family: "NHDisplayMideum";
-                    font-size: 16px;
+                li {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.2rem;
+                        font-family: "NHDisplayMideum";
+                        font-size: 16px;
+                        i {
+                            font-size: 20px;
+                        }
+                    }
                 }
             }
         }

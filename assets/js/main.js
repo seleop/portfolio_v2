@@ -4,6 +4,7 @@ const vezier = "M0,0 C0,0 0.187,-0.022 0.301,0.089 0.469,0.258 0.522,0.723 0.7,0
 const settingScroll = () => {
     const lenis = new Lenis({
         duration: 1.5,
+        autoRaf : true,
     });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {

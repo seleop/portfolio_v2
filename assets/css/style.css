@@ -546,4 +546,55 @@ li {
   font-family: "NHDisplayBold";
   font-size: 38px;
   color: #fcfcfc;
+}
+
+/* section7 */
+.clonesection {
+  padding: 200px 150px;
+}
+.clonesection .clonesection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+}
+.clonesection .clonesection-container .clonesection-container-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(33%, 1fr));
+  grid-template-rows: repeat(2, minmax(556px, 1fr));
+  gap: 40px;
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: #fcfcfc;
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-imgwrap {
+  height: 88%;
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-imgwrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-textwrap {
+  padding: 0 10px;
+  height: 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "pretendard";
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-textwrap strong {
+  font-size: 20px;
+  font-weight: 600;
+}
+.clonesection .clonesection-container .clonesection-container-title h2 { /* title */
+  font-family: "NHDisplayBold";
+  font-size: 38px;
+  color: #fcfcfc;
 }/*# sourceMappingURL=style.css.map */

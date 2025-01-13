@@ -4,7 +4,6 @@ window.addEventListener("scroll", () => {
     if (window.scrollY >= 10) {
         header.classList.add("on");
         header.classList.add("off");
-        console.log("active");
     } else {
         header.classList.remove("on");
         header.classList.add("off");

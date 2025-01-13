@@ -9,6 +9,7 @@ ScrollTrigger.create({
     scrub: true,
 });
 const settings = {
+    
     trigger : "#section3title",
     start : "bottom+=430 100%",
     end : "bottom+=1000 80%",

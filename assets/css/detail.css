@@ -63,9 +63,15 @@
   align-items: center;
   gap: 2rem;
 }
-.section6-detail .detail-inner .detail-context .detail-link span {
+.section6-detail .detail-inner .detail-context .detail-link li a {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
   font-family: "NHDisplayMideum";
   font-size: 16px;
+}
+.section6-detail .detail-inner .detail-context .detail-link li a i {
+  font-size: 20px;
 }
 .section6-detail .detail-inner .detail-img {
   position: absolute;
