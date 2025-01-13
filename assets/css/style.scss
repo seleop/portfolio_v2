@@ -361,8 +361,8 @@ li {
         display: flex;
         align-items: center;
         background-color: $porfolio--color--dark;
-        border-top: 1px solid $porfolio--color--lightblack;
-        border-bottom: 1px solid $porfolio--color--lightblack;
+        border-top: 1px solid $porfolio--color--white;
+        border-bottom: 1px solid $porfolio--color--white;
         &:hover {
             border-top: 1px solid $porfolio--color--white;
             border-bottom: 1px solid $porfolio--color--white;
@@ -385,11 +385,11 @@ li {
                 font-family: "NHDisplayRoman";
                 font-size: 90px;
                 line-height: 80px;
-                color: $porfolio--color--lightdark;
+                color: $porfolio--color--white;
                 text-wrap: nowrap;
             }
             svg {
-                fill: $porfolio--color--lightdark;
+                fill: $porfolio--color--white;
             }
         }
     }
@@ -397,7 +397,8 @@ li {
 
 /* section6 */
 .worksection {
-    padding: 500px 150px;
+    padding: 500px 150px 100px 150px;
+    position: relative;
     .worksection-container {
         display: flex;
         flex-direction: column;
@@ -407,8 +408,10 @@ li {
             flex-direction: column;
             gap: 300px;
             .worksection-workplace-work{
-                padding-bottom: 30px;
+                padding: 60px 30px 60px 30px;
                 border-bottom: 1px solid $porfolio--color--white;
+                backdrop-filter: blur(20px);
+                border-radius: 50px;
                 .workplace-work-inner{
                     display: flex;
                     justify-content: space-between;
@@ -423,6 +426,7 @@ li {
                     .work-inner-description{
                         display: flex;
                         flex-direction: column;
+                        justify-content: space-between;
                         gap: 30px;
                         .inner-description-worktitle{
                             h3 {
@@ -433,11 +437,23 @@ li {
                             }
                         }
                         .inner-description-workcontext{
+                            margin-bottom: 5rem;
                             p {
                                 font-family: 'pretendard';
                                 font-weight: 500;
                                 font-size: 18px;
                                 line-height: 28px;
+                            }
+                        }
+                        .inner-description-used{
+                            display: flex;
+                            justify-content: space-between;
+                            font-family: "NHDisplayLight";
+                            .description-used-skills{
+                                display: flex;
+                                align-items: center;
+                                gap: 0.6rem;
+                                font-size: 14px;
                             }
                         }
                     }
@@ -452,11 +468,11 @@ li {
                             border-radius: 26px;
                         }
                     }
-                    .work-inner-icon{
-                        a {
-                            svg {
-                                fill : $porfolio--color--white
-                            }
+                    .work-inner-year{
+                        li {
+                            text-align: end;
+                            font-family: "DMSans";
+                            font-size: 20px;
                         }
                     }
                 }
@@ -470,11 +486,199 @@ li {
             }
         }
         .worksection-title{
+            padding: 200px 0;
+            display: flex;
+            justify-content: center;
             h2 { /* title */
                 font-family: "NHDisplayBold";
-                font-size: 38px;
+                font-size: 200px;
+                text-wrap: nowrap;
+                letter-spacing: -10px;
                 color: $porfolio--color--white;
             }
         }
+    }
+}
+
+/* section7 */
+
+.clonesection {
+    position: relative;
+    padding: 200px 150px;
+    background-color: $porfolio--color--lightgray;
+    border-radius: 200px 200px 0 0;
+    .clonesection-container{
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+        .clonesection-container-grid{
+            position: relative;
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3, minmax(33%, 1fr));
+            grid-template-rows: repeat(2, minmax(556px, 1fr));
+            gap: 40px;
+            z-index: 10;
+            .container-grid-works{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                border: 1px solid #fcfcfcd0;
+                border-radius: 40px;
+                background-color: #fcfcfc9a;
+                backdrop-filter: blur(15px);
+                .grid-works-imgwrap{
+                    height: 88%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 24px;
+                    }
+                }
+                .grid-works-textwrap{
+                    padding: 0 10px;
+                    height: 12%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-family: 'pretendard';
+                    strong {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        .clonesection-container-title{
+            position: relative;
+            padding: 300px 0 200px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 0;
+            h2 { /* title */
+                font-family: "NHDisplayMideum";
+                letter-spacing: 2px;
+                font-size: 290px;
+                text-wrap: nowrap;
+                color: $porfolio--color--lightblack;
+            }
+        }
+    }
+}
+
+.othersection {
+    padding: 400px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    .othersection-title{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+        color: $porfolio--color--white;
+        h2 {
+            font-family: "NHDisplaythin";
+            font-size: 42px;
+            line-height: 42px;
+            font-weight: 100;
+        }
+        p {
+            font-family: 'pretendard';
+            font-size: 14px;
+        }
+    }
+    .othersection-bgr{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        z-index: -1;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.2);
+        }
+    }
+}
+
+.myselfsection{
+    position: relative;
+    height: calc(100vh - 100px);
+    font-family: "NHDisplayBold";
+    color: $porfolio--color--dark;
+    background-color: $porfolio--color--darkorange;
+    .myselfsection-skills-textwrap{
+        flex-direction: column;
+        position: absolute;
+        right: 150px;
+        width: 1440px;
+        .skills-textwrap-bold{
+            width: 100%;
+            font-size: 60px;
+            line-height: 60px;
+            li:first-child{
+                text-align: end;
+            }
+            li:nth-child(2){
+                text-align: center;
+            }
+            li:last-child{
+                text-align: start;
+            }
+        }
+    }
+    .myselfsection-myself-textwrap{
+        position: absolute;
+        top: 30%;
+        right: 150px;
+        .myself-textwrap-bold{
+            text-align: end;
+            font-size: 80px;
+            line-height: 80px;
+        }
+        .myself-textwrap-sub{
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+    }
+    .myselfsection-since-textwrap{
+        flex-direction: column;
+        position: absolute;
+        right: 150px;
+        bottom: 10%;
+        span {
+            font-size: 36px;
+        }
+        strong {
+            font-size: 120px;
+        }
+    }
+    div {
+        display: flex;
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.workbgrwrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.18);
     }
 }

@@ -1,9 +1,3 @@
-const slowVideo = () => {
-    const section1Video = document.querySelector(".section1_bg_video");
-    section1Video.playbackRate = 0.8;
-    document.querySelector("#videobox1").playbackRate = 0.5;
-};
-
 const landing = () => {
     const greeting = new SplitType("#point-word", { type: "chars" });
     const myname1 = new SplitType("#name01", { type: "chars" });
@@ -221,8 +215,7 @@ const loading = () => {
         ease: "power1.out",
     });
 };
-loading();
-setTimeout(landing, 2900)
+// loading();
+// setTimeout(landing, 2900)
 
-// landing();
-slowVideo();
+landing();

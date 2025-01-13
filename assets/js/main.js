@@ -1,6 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase);
 const vezier = "M0,0 C0,0 0.187,-0.022 0.301,0.089 0.469,0.258 0.522,0.723 0.7,0.9 0.826,1.025 1,1 1,1 ";
+
+const section1Video = document.querySelector(".section1_bg_video");
+const workVideos = document.querySelectorAll(".workbgr");
+
+const slowVideo = (video, rate) => {
+    video.playbackRate = rate
+};
 const settingScroll = () => {
     const lenis = new Lenis({
         duration: 1.5,
@@ -31,8 +38,9 @@ const refleshPage = () => {
 const functionInit = () => {
     refleshPage();
     settingScroll();
+    slowVideo(section1Video, 0.7);
+    workVideos.forEach((e)=> {slowVideo(e, 0.6);})
 };
 
 /* 함수 실행 */
 functionInit();
-

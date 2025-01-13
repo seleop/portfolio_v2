@@ -442,8 +442,8 @@ li {
   display: flex;
   align-items: center;
   background-color: #121212;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-top: 1px solid #fcfcfc;
+  border-bottom: 1px solid #fcfcfc;
 }
 .bandsection .bandsection-horizonLine:hover {
   border-top: 1px solid #fcfcfc;
@@ -468,16 +468,17 @@ li {
   font-family: "NHDisplayRoman";
   font-size: 90px;
   line-height: 80px;
-  color: #292929;
+  color: #fcfcfc;
   text-wrap: nowrap;
 }
 .bandsection .bandsection-horizonLine .bandsection-innertext svg {
-  fill: #292929;
+  fill: #fcfcfc;
 }
 
 /* section6 */
 .worksection {
-  padding: 500px 150px;
+  padding: 500px 150px 100px 150px;
+  position: relative;
 }
 .worksection .worksection-container {
   display: flex;
@@ -490,8 +491,11 @@ li {
   gap: 300px;
 }
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work {
-  padding-bottom: 30px;
+  padding: 60px 30px 60px 30px;
   border-bottom: 1px solid #fcfcfc;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 50px;
 }
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner {
   display: flex;
@@ -506,6 +510,7 @@ li {
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 30px;
 }
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description .inner-description-worktitle h3 {
@@ -514,11 +519,25 @@ li {
   line-height: 50px;
   font-weight: 200;
 }
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description .inner-description-workcontext {
+  margin-bottom: 5rem;
+}
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description .inner-description-workcontext p {
   font-family: "pretendard";
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description .inner-description-used {
+  display: flex;
+  justify-content: space-between;
+  font-family: "NHDisplayLight";
+}
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-description .inner-description-used .description-used-skills {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 14px;
 }
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-image {
   position: relative;
@@ -532,8 +551,10 @@ li {
      object-fit: cover;
   border-radius: 26px;
 }
-.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-icon a svg {
-  fill: #fcfcfc;
+.worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-year li {
+  text-align: end;
+  font-family: "DMSans";
+  font-size: 20px;
 }
 .worksection .worksection-container .worksection-workplace #jheedo {
   font-family: "NHDisplayMideum";
@@ -542,8 +563,201 @@ li {
   font-family: "Montserrat";
   font-weight: 200;
 }
+.worksection .worksection-container .worksection-title {
+  padding: 200px 0;
+  display: flex;
+  justify-content: center;
+}
 .worksection .worksection-container .worksection-title h2 { /* title */
   font-family: "NHDisplayBold";
-  font-size: 38px;
+  font-size: 200px;
+  text-wrap: nowrap;
+  letter-spacing: -10px;
   color: #fcfcfc;
+}
+
+/* section7 */
+.clonesection {
+  position: relative;
+  padding: 200px 150px;
+  background-color: #EBEBEA;
+  border-radius: 200px 200px 0 0;
+}
+.clonesection .clonesection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+.clonesection .clonesection-container .clonesection-container-grid {
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(33%, 1fr));
+  grid-template-rows: repeat(2, minmax(556px, 1fr));
+  gap: 40px;
+  z-index: 10;
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgba(252, 252, 252, 0.8156862745);
+  border-radius: 40px;
+  background-color: rgba(252, 252, 252, 0.6039215686);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-imgwrap {
+  height: 88%;
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-imgwrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-textwrap {
+  padding: 0 10px;
+  height: 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "pretendard";
+}
+.clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-textwrap strong {
+  font-size: 20px;
+  font-weight: 600;
+}
+.clonesection .clonesection-container .clonesection-container-title {
+  position: relative;
+  padding: 300px 0 200px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+.clonesection .clonesection-container .clonesection-container-title h2 { /* title */
+  font-family: "NHDisplayMideum";
+  letter-spacing: 2px;
+  font-size: 290px;
+  text-wrap: nowrap;
+  color: #333;
+}
+
+.othersection {
+  padding: 400px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.othersection .othersection-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.2rem;
+  color: #fcfcfc;
+}
+.othersection .othersection-title h2 {
+  font-family: "NHDisplaythin";
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 100;
+}
+.othersection .othersection-title p {
+  font-family: "pretendard";
+  font-size: 14px;
+}
+.othersection .othersection-bgr {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.othersection .othersection-bgr video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.2);
+}
+
+.myselfsection {
+  position: relative;
+  height: calc(100vh - 100px);
+  font-family: "NHDisplayBold";
+  color: #121212;
+  background-color: #E35000;
+}
+.myselfsection .myselfsection-skills-textwrap {
+  flex-direction: column;
+  position: absolute;
+  right: 150px;
+  width: 1440px;
+}
+.myselfsection .myselfsection-skills-textwrap .skills-textwrap-bold {
+  width: 100%;
+  font-size: 60px;
+  line-height: 60px;
+}
+.myselfsection .myselfsection-skills-textwrap .skills-textwrap-bold li:first-child {
+  text-align: end;
+}
+.myselfsection .myselfsection-skills-textwrap .skills-textwrap-bold li:nth-child(2) {
+  text-align: center;
+}
+.myselfsection .myselfsection-skills-textwrap .skills-textwrap-bold li:last-child {
+  text-align: start;
+}
+.myselfsection .myselfsection-myself-textwrap {
+  position: absolute;
+  top: 30%;
+  right: 150px;
+}
+.myselfsection .myselfsection-myself-textwrap .myself-textwrap-bold {
+  text-align: end;
+  font-size: 80px;
+  line-height: 80px;
+}
+.myselfsection .myselfsection-myself-textwrap .myself-textwrap-sub {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.myselfsection .myselfsection-since-textwrap {
+  flex-direction: column;
+  position: absolute;
+  right: 150px;
+  bottom: 10%;
+}
+.myselfsection .myselfsection-since-textwrap span {
+  font-size: 36px;
+}
+.myselfsection .myselfsection-since-textwrap strong {
+  font-size: 120px;
+}
+.myselfsection div {
+  display: flex;
+}
+.myselfsection div ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.workbgrwrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.workbgrwrap video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.18);
 }/*# sourceMappingURL=style.css.map */
