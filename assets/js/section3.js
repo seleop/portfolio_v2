@@ -1,13 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase);
 
-ScrollTrigger.create({
-    trigger: ".section3",
-    start: "top top",
-    end: "+=75%",
-    pin: true,
-    scrub: true,
-});
+// ScrollTrigger.create({
+//     trigger: ".mygoalsection",
+//     start: "top top",
+//     end: "+=75%",
+//     pin: true,
+//     scrub: true,
+// });
 const settings = {
     trigger : "#section3title",
     start : "bottom+=430 100%",
@@ -21,19 +21,19 @@ const moveWords = () => {
         color : "#15F5BA",
         ease: CustomEase.create("custom", vezier),
     })
-    gsap.to(".section3-inner", {
+    gsap.to(".mygoalsection-inner", {
         scrollTrigger:settings,
         gap:"100px",
         y:100,
         marginLeft:50,
         ease: CustomEase.create("custom", vezier),
     })
-    gsap.to(".section3-inner-sentences > li", {
+    gsap.to(".mygoalsection-inner-sentences > li", {
         scrollTrigger:settings,
         fontSize:"24px",
         ease: CustomEase.create("custom", vezier),
     })
-    gsap.to(".section3-inner-sentences", {
+    gsap.to(".mygoalsection-inner-sentences", {
         scrollTrigger:settings,
         gap:"20px", 
         ease: CustomEase.create("custom", vezier),
@@ -41,7 +41,7 @@ const moveWords = () => {
 }
 const showWord = () => {
     const titleWord = new SplitType("#section3title", { type: "chars" });
-    const words = document.querySelectorAll(".section3-inner-sentences > li");
+    const words = document.querySelectorAll(".mygoalsection-inner-sentences > li");
     words.forEach((e) => {
         let liwords = new SplitType(e, { type: "chars" });
         gsap.from(liwords.chars, {
@@ -98,6 +98,6 @@ const moveImage = () => {
         }
     });
 }
-moveImage();
-moveWords();
-showWord()
+// moveImage();
+// moveWords();
+// showWord()

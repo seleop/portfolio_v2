@@ -48,3 +48,13 @@
 		transform: translateX(-100%);
 	}
 }
+
+@keyframes imgViewing {
+	0% {
+		object-position: top;
+	}
+	100% {
+		
+		object-position: bottom;
+	}
+}

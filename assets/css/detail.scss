@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./keyframes";
 
 .section6-detail {
     position: absolute;
@@ -89,7 +90,20 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: top;
                 border-radius: 20px;
+                &.hide {
+                    display: none;
+                }
+            }
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                &.hide {
+                    display: none;
+                }
             }
         }
     }
