@@ -93,11 +93,6 @@ const landing = () => {
             );
         },
     });
-    gsap.from("header", {
-        duration: 1,
-        delay: 0.5,
-        y: -150,
-    });
     gsap.from(".main-imgwrap", {
         duration: 2,
         delay: 0.5,
@@ -215,7 +210,7 @@ const loading = () => {
         ease: "power1.out",
     });
 };
-loading();
-setTimeout(landing, 2900)
+// loading();
+// setTimeout(landing, 2900)
 
-// landing();
+landing();

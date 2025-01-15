@@ -351,12 +351,12 @@ li {
 
 /* section6 */
 .worksection {
-    padding: 500px 150px 100px 150px;
+    padding: 200px 150px 100px 150px;
     position: relative;
     .worksection-container {
         display: flex;
         flex-direction: column;
-        gap: 300px;
+        gap: 100px;
         .worksection-workplace {
             display: flex;
             flex-direction: column;
@@ -443,6 +443,7 @@ li {
             padding: 200px 0;
             display: flex;
             justify-content: center;
+            overflow: hidden;
             h2 {
                 /* title */
                 font-family: "NHDisplayBold";
@@ -456,7 +457,6 @@ li {
 }
 
 /* section7 */
-
 .clonesection {
     position: relative;
     padding: 200px 150px;
@@ -525,7 +525,7 @@ li {
 }
 
 .othersection {
-    height: calc(100vh - 100px);
+    height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -535,43 +535,52 @@ li {
     .othersection-works {
         position: absolute;
         border: 1px solid #fcfcfcb4;
+        // animation: floatSway 3s ease-in-out infinite;
         z-index: 12;
+
+        /* 포트폴리오 했던거 */
         &.othersection-works-01 {
             width: 600px;
             aspect-ratio: 18 / 9;
             bottom: 10%;
             left: 2%;
         }
+        /* Dak gg 앱 */
         &.othersection-works-02 {
             width: 200px;
             aspect-ratio: 9 / 16;
-            top: 5%;
+            top: 16%;
             left: 15%;
         }
+        /* 숨고 앱 */
         &.othersection-works-03 {
             width: 160px;
             aspect-ratio: 9 / 18;
             bottom: 7%;
             right: 2%;
         }
+        /* trpg */
         &.othersection-works-04 {
             width: 410px;
             aspect-ratio: 16 / 9;
-            top: 2%;
+            top: 12%;
             left: 30%;
         }
+        /* 희도쇼핑몰(구) */
         &.othersection-works-05 {
             width: 610px;
             aspect-ratio: 20 / 9;
-            top: 7%;
+            top: 18%;
             right: 5%;
         }
+        /* 아티스트 */
         &.othersection-works-06 {
             width: 380px;
             aspect-ratio: 20 / 9;
             bottom: 5%;
             right: 43%;
         }
+        /* 르쥬르 */
         &.othersection-works-07 {
             width: 460px;
             aspect-ratio: 18 / 9;
@@ -600,9 +609,9 @@ li {
         display: flex;
         flex-direction: column;
         text-align: center;
-        gap: 1.2rem;
+        gap: 1rem;
+        margin-top: 5rem;
         color: $porfolio--color--white;
-        margin-bottom: 5rem;
         & > div {
             overflow: hidden;
         }
@@ -637,7 +646,7 @@ li {
 
 .myselfsection {
     position: relative;
-    height: calc(100vh - 100px);
+    height: 100vh;
     font-family: "NHDisplayBold";
     color: $porfolio--color--dark;
     background-color: $porfolio--color--darkorange;
@@ -646,8 +655,8 @@ li {
         z-index: 20;
         overflow: hidden;
         &.myselfsection-imgwrapper01 {
-            left: 10%;
-            bottom: 10%;
+            left: 150px;
+            bottom: 5%;
             width: 300px;
             aspect-ratio: 1 / 1;
         }
@@ -677,8 +686,9 @@ li {
     .myselfsection-skills-textwrap {
         flex-direction: column;
         position: absolute;
-        right: 150px;
-        width: 1440px;
+        top: 10%;
+        left: 150px;
+        width: calc(100vw - 300px);
         .skills-textwrap-bold {
             width: 100%;
             font-size: 60px;
@@ -693,18 +703,25 @@ li {
                 text-align: start;
             }
         }
+        .skills-textwrap-sub {
+            margin-right: 100px;
+        }
     }
     .myselfsection-myself-another {
         position: absolute;
-        top: 0;
+        top: 15%;
         left: -100%;
         font-size: 120px;
+        line-height: 110px;
     }
     .myselfsection-myself-textwrap {
         position: absolute;
-        top: 30%;
+        top: 35%;
         right: 150px;
         .textwrap-sub02 {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
             margin: 0 1rem 1rem 0;
         }
         .myself-textwrap-bold {
@@ -719,7 +736,7 @@ li {
         flex-direction: column;
         position: absolute;
         right: 150px;
-        bottom: 10%;
+        bottom: 5%;
         li {
             overflow: hidden;
             span {
@@ -746,52 +763,29 @@ li {
             }
         }
     }
-}
-
-.mygoalsection {
-    padding: 200px 0;
-    background-color: $porfolio--color--dark;
-    .mygoalsection-inner {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        font-family: "pretendard";
-        padding-left: 60px;
-        color: $porfolio--color--white;
-        justify-content: center;
-        .mygoalsection-title {
-            display: flex;
-            overflow: hidden;
-            h2 {
-                font-size: 140px;
-                color: $porfolio--color--orange;
-                transition: 0.1s;
-            }
-        }
-        .mygoalsection-inner-sentences {
-            display: flex;
-            flex-direction: column;
-            li {
-                font-size: 50px;
-                overflow: hidden;
-            }
-        }
-        .mygoalsection-img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 285px;
-            height: 350px;
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 40px;
-                object-fit: cover;
-                filter: grayscale(1);
+    .myselfsection-contact {
+        position: absolute;
+        bottom: 30%;
+        right: 2%;
+        overflow: hidden;
+        .myselfsection-contact-inner {
+            border: 5px solid $porfolio--color--black;
+            border-radius: 200px;
+            cursor: pointer;
+            strong {
+                font-family: "Caveat";
+                padding: 40px 80px;
+                color: $porfolio--color--dark;
+                font-size: 130px;
+                cursor: pointer;
             }
         }
     }
+}
+
+.contactsection{
+    height: 100vh;
+    background-color: $porfolio--color--darkorange;
 }
 
 /* work section background 스타일 */

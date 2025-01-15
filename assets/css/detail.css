@@ -57,6 +57,23 @@
        object-position: bottom;
   }
 }
+@keyframes floatSway {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, -20px);
+  }
+  50% {
+    transform: translate(5px, 0px);
+  }
+  75% {
+    transform: translate(-5px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .section6-detail {
   position: absolute;
   bottom: 0%;
@@ -124,12 +141,19 @@
   align-items: center;
   gap: 2rem;
 }
+.section6-detail .detail-inner .detail-context .detail-link li span {
+  cursor: default;
+}
 .section6-detail .detail-inner .detail-context .detail-link li a {
   display: flex;
   align-items: center;
   gap: 0.2rem;
   font-family: "NHDisplayMideum";
   font-size: 16px;
+  transition: 0.3s;
+}
+.section6-detail .detail-inner .detail-context .detail-link li a:hover {
+  color: #15F5BA;
 }
 .section6-detail .detail-inner .detail-context .detail-link li a i {
   font-size: 20px;

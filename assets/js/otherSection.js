@@ -1,6 +1,6 @@
 ScrollTrigger.create({
     trigger: ".othersection",
-    start: "top top+=100px",
+    start: "top top",
     end: "+=150%",
     pin: true,
 });

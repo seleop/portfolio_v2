@@ -61,6 +61,23 @@
        object-position: bottom;
   }
 }
+@keyframes floatSway {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, -20px);
+  }
+  50% {
+    transform: translate(5px, 0px);
+  }
+  75% {
+    transform: translate(-5px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 @font-face {
   font-family: "pretendard";
   src: url(../font/PretendardJPVariable.ttf);
@@ -440,13 +457,13 @@ li {
 
 /* section6 */
 .worksection {
-  padding: 500px 150px 100px 150px;
+  padding: 200px 150px 100px 150px;
   position: relative;
 }
 .worksection .worksection-container {
   display: flex;
   flex-direction: column;
-  gap: 300px;
+  gap: 100px;
 }
 .worksection .worksection-container .worksection-workplace {
   display: flex;
@@ -530,6 +547,7 @@ li {
   padding: 200px 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .worksection .worksection-container .worksection-title h2 {
   /* title */
@@ -611,7 +629,7 @@ li {
 }
 
 .othersection {
-  height: calc(100vh - 100px);
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -623,6 +641,13 @@ li {
   position: absolute;
   border: 1px solid rgba(252, 252, 252, 0.7058823529);
   z-index: 12;
+  /* 포트폴리오 했던거 */
+  /* Dak gg 앱 */
+  /* 숨고 앱 */
+  /* trpg */
+  /* 희도쇼핑몰(구) */
+  /* 아티스트 */
+  /* 르쥬르 */
 }
 .othersection .othersection-works.othersection-works-01 {
   width: 600px;
@@ -633,7 +658,7 @@ li {
 .othersection .othersection-works.othersection-works-02 {
   width: 200px;
   aspect-ratio: 9/16;
-  top: 5%;
+  top: 16%;
   left: 15%;
 }
 .othersection .othersection-works.othersection-works-03 {
@@ -645,13 +670,13 @@ li {
 .othersection .othersection-works.othersection-works-04 {
   width: 410px;
   aspect-ratio: 16/9;
-  top: 2%;
+  top: 12%;
   left: 30%;
 }
 .othersection .othersection-works.othersection-works-05 {
   width: 610px;
   aspect-ratio: 20/9;
-  top: 7%;
+  top: 18%;
   right: 5%;
 }
 .othersection .othersection-works.othersection-works-06 {
@@ -690,9 +715,9 @@ li {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 1.2rem;
+  gap: 1rem;
+  margin-top: 5rem;
   color: #fcfcfc;
-  margin-bottom: 5rem;
 }
 .othersection .othersection-title > div {
   overflow: hidden;
@@ -728,7 +753,7 @@ li {
 
 .myselfsection {
   position: relative;
-  height: calc(100vh - 100px);
+  height: 100vh;
   font-family: "NHDisplayBold";
   color: #121212;
   background-color: #E35000;
@@ -739,8 +764,8 @@ li {
   overflow: hidden;
 }
 .myselfsection .myselfsection-imgwrapper.myselfsection-imgwrapper01 {
-  left: 10%;
-  bottom: 10%;
+  left: 150px;
+  bottom: 5%;
   width: 300px;
   aspect-ratio: 1/1;
 }
@@ -771,8 +796,9 @@ li {
 .myselfsection .myselfsection-skills-textwrap {
   flex-direction: column;
   position: absolute;
-  right: 150px;
-  width: 1440px;
+  top: 10%;
+  left: 150px;
+  width: calc(100vw - 300px);
 }
 .myselfsection .myselfsection-skills-textwrap .skills-textwrap-bold {
   width: 100%;
@@ -788,18 +814,25 @@ li {
 .myselfsection .myselfsection-skills-textwrap .skills-textwrap-bold li:last-child {
   text-align: start;
 }
+.myselfsection .myselfsection-skills-textwrap .skills-textwrap-sub {
+  margin-right: 100px;
+}
 .myselfsection .myselfsection-myself-another {
   position: absolute;
-  top: 0;
+  top: 15%;
   left: -100%;
   font-size: 120px;
+  line-height: 110px;
 }
 .myselfsection .myselfsection-myself-textwrap {
   position: absolute;
-  top: 30%;
+  top: 35%;
   right: 150px;
 }
 .myselfsection .myselfsection-myself-textwrap .textwrap-sub02 {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   margin: 0 1rem 1rem 0;
 }
 .myselfsection .myselfsection-myself-textwrap .myself-textwrap-bold {
@@ -813,7 +846,7 @@ li {
   flex-direction: column;
   position: absolute;
   right: 150px;
-  bottom: 10%;
+  bottom: 5%;
 }
 .myselfsection .myselfsection-since-textwrap li {
   overflow: hidden;
@@ -840,52 +873,28 @@ li {
 .myselfsection div .myselfsection-textwrap li span {
   display: block;
 }
-
-.mygoalsection {
-  padding: 200px 0;
-  background-color: #121212;
-}
-.mygoalsection .mygoalsection-inner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  font-family: "pretendard";
-  padding-left: 60px;
-  color: #fcfcfc;
-  justify-content: center;
-}
-.mygoalsection .mygoalsection-inner .mygoalsection-title {
-  display: flex;
-  overflow: hidden;
-}
-.mygoalsection .mygoalsection-inner .mygoalsection-title h2 {
-  font-size: 140px;
-  color: #E55901;
-  transition: 0.1s;
-}
-.mygoalsection .mygoalsection-inner .mygoalsection-inner-sentences {
-  display: flex;
-  flex-direction: column;
-}
-.mygoalsection .mygoalsection-inner .mygoalsection-inner-sentences li {
-  font-size: 50px;
-  overflow: hidden;
-}
-.mygoalsection .mygoalsection-inner .mygoalsection-img {
+.myselfsection .myselfsection-contact {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 285px;
-  height: 350px;
+  bottom: 30%;
+  right: 2%;
+  overflow: hidden;
 }
-.mygoalsection .mygoalsection-inner .mygoalsection-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(1);
+.myselfsection .myselfsection-contact .myselfsection-contact-inner {
+  border: 5px solid #000;
+  border-radius: 200px;
+  cursor: pointer;
+}
+.myselfsection .myselfsection-contact .myselfsection-contact-inner strong {
+  font-family: "Caveat";
+  padding: 40px 80px;
+  color: #121212;
+  font-size: 130px;
+  cursor: pointer;
+}
+
+.contactsection {
+  height: 100vh;
+  background-color: #E35000;
 }
 
 /* work section background 스타일 */

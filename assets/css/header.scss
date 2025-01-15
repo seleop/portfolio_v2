@@ -12,15 +12,11 @@ header {
     color: $porfolio--color--white;
     background-color: #00000077;
     backdrop-filter: blur(10px);
+    transition: 0.3s;
     z-index: 1000;
     &.on {
         height: 100px;
         color: $porfolio--color--white;
-        background-color: $porfolio--color--black;
-        transition: 0.3s;
-    }
-    &.off {
-        transition: 0.3s;
     }
     #logo {
         font-family: "NHDisplayLight";

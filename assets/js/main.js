@@ -10,11 +10,11 @@ const slowVideo = (video, rate) => {
 };
 const settingScroll = () => {
     const lenis = new Lenis({
-        duration: 1.5,
+        duration: 1,
     });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {
-        lenis.raf(time * 300);
+        lenis.raf(time * 150);
     });
     gsap.ticker.lagSmoothing(0);
 };

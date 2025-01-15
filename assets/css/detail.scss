@@ -66,12 +66,19 @@
                 align-items: center;
                 gap: 2rem;
                 li {
+                    span {
+                        cursor: default;
+                    }
                     a {
                         display: flex;
                         align-items: center;
                         gap: 0.2rem;
                         font-family: "NHDisplayMideum";
                         font-size: 16px;
+                        transition: .3s;
+                        &:hover {
+                            color: $porfolio--color--blue;
+                        }
                         i {
                             font-size: 20px;
                         }
