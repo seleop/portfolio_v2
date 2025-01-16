@@ -235,6 +235,7 @@ li {
 }
 
 .introduceSection {
+    position: relative;
     padding: 120px 0 100px 0;
     background-color: $porfolio--color--dark;
     .introduceSection-container {
@@ -308,6 +309,21 @@ li {
             }
         }
     }
+    .introduceSection-background{
+        position: absolute;
+        top: -10%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        img {
+            width: 150%;
+            height: 150%;
+            object-fit: cover;
+            object-position: 50% 0%;
+            filter: brightness(0.7);
+        }
+    }
 }
 
 /* section5 */
@@ -342,17 +358,6 @@ li {
             span {
                 width: $creative-interaction-width;
             }
-        }
-        &:hover {
-            border-top: 1px solid $porfolio--color--white;
-            border-bottom: 1px solid $porfolio--color--white;
-            background-color: $porfolio--color--darkblue;
-        }
-        &:hover .bandsection-innertext span {
-            color: $porfolio--color--white;
-        }
-        &:hover .bandsection-innertext svg {
-            fill: $porfolio--color--white;
         }
         .bandsection-innertext {
             display: flex;
@@ -491,8 +496,21 @@ li {
 .clonesection {
     position: relative;
     padding: 200px 150px;
-    background-color: $porfolio--color--lightgray;
-    border-radius: 200px 200px 0 0;
+    .clonesection-background{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img{
+            width: 130%;
+            height: 130%;
+            object-fit: cover;
+            object-position:50% 100%;
+            border-radius: 200px 200px 0 0;
+            filter:brightness(1.1)
+        }
+    }
     .clonesection-container {
         display: flex;
         flex-direction: column;

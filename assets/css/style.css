@@ -377,6 +377,7 @@ li {
 }
 
 .introduceSection {
+  position: relative;
   padding: 120px 0 100px 0;
   background-color: #121212;
 }
@@ -451,6 +452,23 @@ li {
 .introduceSection .introduceSection-container .introduceSection-rightblock .introduceSection-rightblock-line9 #creative {
   color: #15f5ba;
 }
+.introduceSection .introduceSection-background {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+.introduceSection .introduceSection-background img {
+  width: 150%;
+  height: 150%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  filter: brightness(0.7);
+}
 
 /* section5 */
 .bandsection .bandsection-horizonLine {
@@ -484,17 +502,6 @@ li {
 }
 .bandsection .bandsection-horizonLine:last-child .bandsection-innertext span {
   width: 1000px;
-}
-.bandsection .bandsection-horizonLine:hover {
-  border-top: 1px solid #fcfcfc;
-  border-bottom: 1px solid #fcfcfc;
-  background-color: #12c797;
-}
-.bandsection .bandsection-horizonLine:hover .bandsection-innertext span {
-  color: #fcfcfc;
-}
-.bandsection .bandsection-horizonLine:hover .bandsection-innertext svg {
-  fill: #fcfcfc;
 }
 .bandsection .bandsection-horizonLine .bandsection-innertext {
   display: flex;
@@ -627,8 +634,23 @@ li {
 .clonesection {
   position: relative;
   padding: 200px 150px;
-  background-color: #ebebea;
+}
+.clonesection .clonesection-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.clonesection .clonesection-background img {
+  width: 130%;
+  height: 130%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
   border-radius: 200px 200px 0 0;
+  filter: brightness(1.1);
 }
 .clonesection .clonesection-container {
   display: flex;
