@@ -24,7 +24,7 @@ ScrollTrigger.create({
 
 gsap.to(".worksection-title", {
     scrollTrigger:{
-        trigger:"titletext",
+        trigger:titletext,
         start :"center center",
         end :"+=500%",
         scrub : 2

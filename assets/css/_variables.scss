@@ -1,10 +1,28 @@
-$porfolio--color--black : #000;
-$porfolio--color--lightblack : #333;
-$porfolio--color--dark : #121212;
-$porfolio--color--lightdark : #292929;
-$porfolio--color--lightgray : #EBEBEA;
-$porfolio--color--white : #fcfcfc;
-$porfolio--color--blue : #15F5BA;
-$porfolio--color--darkblue : #12c797;
-$porfolio--color--orange : #E55901;
-$porfolio--color--darkorange : #E35000;
+$porfolio--color--black: #000;
+$porfolio--color--lightblack: #333;
+$porfolio--color--dark: #121212;
+$porfolio--color--lightdark: #292929;
+$porfolio--color--lightgray: #ebebea;
+$porfolio--color--white: #fcfcfc;
+$porfolio--color--blue: #15f5ba;
+$porfolio--color--darkblue: #12c797;
+$porfolio--color--orange: #e55901;
+$porfolio--color--darkorange: #e35000;
+
+/* Breakpoints */
+$breakpoint-desktop: 1440px;
+$breakpoint-laptop: 1280px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 360px;
+
+/* horizon width */
+$better-experience-width: 1000px;
+$ux-ui-design-width: 600px;
+$responsice-web-width: 900px;
+$creative-interaction-width: 1000px;
+
+/* animation time */
+$better-experience-time: 60s;
+$ux-ui-design-time: 45s;
+$responsice-web-time: 45s;
+$creative-interaction-time: 60s;

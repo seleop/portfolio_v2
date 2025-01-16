@@ -1,3 +1,9 @@
+/* Breakpoints */
+/* horizon width */
+/* animation time */
+/* Breakpoints */
+/* horizon width */
+/* animation time */
 @keyframes nowloading {
   0% {
     box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
@@ -39,12 +45,36 @@
     box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
   }
 }
-@keyframes moveHorizon {
+@keyframes moveHorizon1 {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-4708px);
+  }
+}
+@keyframes moveHorizon2 {
+  0% {
+    transform: translateX(-2331px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes moveHorizon3 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-4308px);
+  }
+}
+@keyframes moveHorizon4 {
+  0% {
+    transform: translateX(-4708px);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 @keyframes imgViewing {
@@ -78,8 +108,9 @@
   position: absolute;
   bottom: 0%;
   right: 0%;
-  width: 593px;
-  height: 324px;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1.83/1;
   border-radius: 25px;
   border: 1px solid rgba(252, 252, 252, 0.1450980392);
 }
@@ -153,17 +184,13 @@
   transition: 0.3s;
 }
 .section6-detail .detail-inner .detail-context .detail-link li a:hover {
-  color: #15F5BA;
+  color: #15f5ba;
 }
 .section6-detail .detail-inner .detail-context .detail-link li a i {
   font-size: 20px;
 }
 .section6-detail .detail-inner .detail-img {
   position: absolute;
-  top: 0%;
-  right: 0%;
-  width: 593px;
-  height: 324px;
   z-index: 10;
 }
 .section6-detail .detail-inner .detail-img img {

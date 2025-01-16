@@ -90,10 +90,10 @@ const lineAnimation = () => {
         opacity: 0,
         ease: CustomEase.create("custom", vezier),
     });
-    gsap.from(".section2-square", {
+    gsap.to(".section2-square", {
         scrollTrigger: settings,
-        backgroundColor: "#000",
-        height: "0px",
+        backgroundColor: "#fff",
+        height: "7.5vw",
         ease: CustomEase.create("custom", vezier),
     });
     gsap.from(".section2-horizon__line", {
@@ -134,7 +134,7 @@ const lineAnimation = () => {
 const expandLine = () => {
     const line = document.querySelector(".section2-horizon__line");
     const originWidth = parseInt(getComputedStyle(line).width)
-    const setNumber = 300;
+    const setNumber = 100;
     let isExpanded = false;
     setInterval(() => {
         if (isExpanded === false) {

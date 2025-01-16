@@ -1,3 +1,5 @@
+@import "./variables";
+
 @keyframes nowloading {
 	0% {
 		box-shadow: -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor, -0.2em -0.2em 0 0.1em currentcolor;
@@ -40,12 +42,36 @@
 	}
 }
 
-@keyframes moveHorizon {
+@keyframes moveHorizon1 {
 	0% {
 		transform: translateX(0%);
 	}
 	100% {
-		transform: translateX(-100%);
+		transform: translateX(- calc(1177px * 4));
+	}
+}
+@keyframes moveHorizon2 {
+	0% {
+		transform: translateX( - calc(777px * 3));
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+@keyframes moveHorizon3 {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(- calc(1077px * 4));
+	}
+}
+@keyframes moveHorizon4 {
+	0% {
+		transform: translateX(- calc(1177px * 4));
+	}
+	100% {
+		transform: translateX(0%);
 	}
 }
 

@@ -1,9 +1,9 @@
 @import "./variables";
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 150px;
-    padding: 0 150px;
+    padding: 0 10vw;
     position: fixed;
     top: 0;
     display: flex;
@@ -20,16 +20,19 @@ header {
     }
     #logo {
         font-family: "NHDisplayLight";
-        font-size: 38px;
+        font-size: clamp(20px, 2vw, 2.2vw);
     }
     nav {
         ul {
             display: flex;
-            gap: 2rem;
+            gap: 2vw;
             li {
                 a {
                     font-family: "NHDisplayLight";
-                    font-size: 24px;
+                    font-size: clamp(16px, 1vw, 1.1vw);
+                    &:hover {
+                        color: $porfolio--color--blue;
+                    }
                 }
             }
         }
@@ -42,11 +45,11 @@ header {
         font-family: "NHDisplayRoman";
         strong {
             font-weight: 200;
-            font-size: 20px;
+            font-size: clamp(16px, 1vw, 1.2vw);
         }
         span {
             font-family: "NHDisplayLight";
-            font-size: 14px;
+            font-size: clamp(16px, 0.8vw, 1vw);
         }
     }
 }

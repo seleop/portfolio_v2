@@ -5,8 +5,9 @@
     position: absolute;
     bottom: 0%;
     right: 0%;
-    width: 593px;
-    height: 324px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1.83 / 1;
     border-radius: 25px;
     border: 1px solid #fcfcfc25;
     .detail-bgr {
@@ -88,10 +89,6 @@
         }
         .detail-img {
             position: absolute;
-            top: 0%;
-            right: 0%;
-            width: 593px;
-            height: 324px;
             z-index: 10;
             img {
                 width: 100%;

@@ -10,28 +10,26 @@ const landing = () => {
     let pointWord = gsap.timeline();
     pointWord.to(greeting.chars, {
         duration: 2,
+        y : 0,
         ease: "power3.out",
-        fontSize: "220px",
-        y: -360,
+        fontSize: "14vw",
         color: "#15F5BA",
         stagger: { each: 0.03, from: "center" },
         onComplete: () => {
             gsap.fromTo(
                 greeting.chars,
-                {
-                    y: -360,
-                    fontSize: "220PX",
-                },
+                {},
                 {
                     scrollTrigger: {
                         trigger: "#name01",
                         start: "center+=200 center",
                         end: "center+=800 top",
                         scrub: true,
+                        invalidateOnRefresh: true,
                     },
-                    y: -220,
                     stagger: 0.1,
-                    fontSize: "300px",
+                    y:100,
+                    fontSize: "11vw",
                     rotateX: "360deg",
                     color: "#E55901",
                     ease: CustomEase.create("custom", vezier),
@@ -42,17 +40,17 @@ const landing = () => {
     gsap.fromTo(
         greeting.chars,
         {
-            y: -220,
+            y: 100,
         },
         {
             scrollTrigger: {
                 trigger: "#name01",
-                start: "center+=1600 center",
-                end: "center+=2500 top",
-                scrub: 0.5,
+                start: "top+=700 top",
+                end: "top+=1700 top",
+                invalidateOnRefresh: true,
+                scrub: 2,
             },
-            duration: 0.5,
-            yPercent: 300,
+            yPercent: 400,
         }
     );
     gsap.to(
@@ -60,9 +58,10 @@ const landing = () => {
         {
             scrollTrigger: {
                 trigger: "#name01",
-                start: "center+=2550 center",
-                end: "center+=2600 top",
+                start: "top+=1700 top",
+                end: "top+=1800 top",
                 scrub:true,
+                invalidateOnRefresh: true,
             },
             opacity: 0,
         }
@@ -83,6 +82,7 @@ const landing = () => {
                         trigger: "#name01",
                         start: "center center+=20%",
                         end: "center top",
+                        invalidateOnRefresh: true,
                         scrub: true,
                     },
                     delay: 0.15,
@@ -92,14 +92,6 @@ const landing = () => {
                 }
             );
         },
-    });
-    gsap.from(".main-imgwrap", {
-        duration: 2,
-        delay: 0.5,
-        scale: 0.8,
-        y: -50,
-        opacity: 0,
-        ease: "expo.out",
     });
     gsap.from(myname1.chars, {
         duration: 2,
@@ -175,7 +167,6 @@ const landing = () => {
 
 const loading = () => {
     const loadingText = new SplitType("#loading__name", { type: "chars" });
-
     const hideLoading = () => {
         gsap.to("#loading", {
             duration: 0.6,

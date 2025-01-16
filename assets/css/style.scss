@@ -1,6 +1,7 @@
 @import "./keyframes";
 @import "./variables";
 @import "./font";
+@import "./mixin";
 
 /* 로딩 화면 스타일*/
 @import "./loading.css";
@@ -33,112 +34,118 @@ li {
     position: relative;
     z-index: 0;
     display: block;
-    min-height: 100vh;
     background-color: $porfolio--color--dark;
 }
 
 .section1 {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $porfolio--color--white;
-    .section1-middle {
+    .section1-inner {
+        width: 75vw;
         position: absolute;
-        top: 50%;
+        top: 32%;
         left: 50%;
         transform: translate(-50%, 0);
-        strong {
-            display: inline-block;
-            position: relative;
-            font-family: "NHDisplayMideum";
-            font-size: 320px;
-            text-wrap: nowrap;
-            mix-blend-mode: hard-light;
-            color: $porfolio--color--black;
-            opacity: 1;
-            z-index: 10;
-        }
-        .main-imgwrap {
-            width: 250px;
-            height: 286px;
-            position: absolute;
-            top: -30%;
-            left: 50%;
-            transform: translate(-50%, 0);
-            z-index: 0;
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 16px;
-                object-fit: cover;
-            }
-        }
-    }
-    .section1-bottom__container {
-        width: 100vw;
-        padding: 0 150px;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        bottom: 5%;
-        color: $porfolio--color--white;
-        .section1-bottom__top {
-            display: flex;
-            justify-content: space-between;
-            .section1-bottom__name {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                font-family: "NHDisplaythin";
-                font-size: 60px;
-                line-height: 70px;
-                #name01,
-                #name02 {
-                    overflow: hidden;
-                }
+        .section1-middle {
+            position: relative;
+            strong {
+                /* GREETINGS */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: inline-block;
+                font-family: "NHDisplayMideum";
+                text-wrap: nowrap;
+                mix-blend-mode: hard-light;
+                color: $porfolio--color--black;
+                opacity: 1;
+                z-index: -1;
             }
-            .section1-bottom__contents {
+        }
+        .section1-bottom__container {
+            margin-top: 350px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5vw;
+            color: $porfolio--color--white;
+            .section1-bottom__top {
                 display: flex;
-                flex-direction: column;
-                align-items: end;
-                font-family: "NHDisplayLight";
-                font-size: 50px;
-                line-height: 50px;
-                overflow: hidden;
-                .section1-textwrap {
-                    overflow: hidden;
-                }
-                .section1-spanwrap {
-                    margin-top: 0.4rem;
-                    height: 50px;
+                justify-content: space-between;
+                .section1-bottom__name {
                     display: flex;
                     flex-direction: column;
-                    overflow: hidden;
+                    justify-content: flex-end;
+                    font-family: "NHDisplaythin";
+                    font-size: 3vw;
+                    line-height: 3.5vw;
+                    text-wrap: nowrap;
+                    #name01,
+                    #name02 {
+                        overflow: hidden;
+                    }
+                }
+                .section1-bottom__contents {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
                     align-items: end;
-                    span {
-                        padding-right: 0.4rem;
-                        font-style: italic;
-                        color: $porfolio--color--blue;
+                    font-family: "NHDisplayLight";
+                    font-size: 3vw;
+                    line-height: 3.5vw;
+                    overflow: hidden;
+                    .section1-textwrap {
+                        width: 100%;
+                        text-align: end;
+                        overflow: hidden;
+                        span {
+                            display: flex;
+                        }
+                    }
+                    .section1-spanwrap {
+                        height: 3vw;
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;
+                        align-items: end;
+                        span {
+                            display: flex;
+                            padding-right: 0.4rem;
+                            font-style: italic;
+                            color: $porfolio--color--blue;
+                        }
                     }
                 }
             }
-        }
-        .section1-horizon__line {
-            position: relative;
-            width: 0%;
-            height: 1px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: $porfolio--color--white;
-        }
-        .section1-bottom__subcontents {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            font-family: "NHDisplayLight";
-            font-size: 1rem;
-            line-height: 24px;
-            overflow: hidden;
+            .section1-horizon__line {
+                position: relative;
+                width: 0%;
+                height: 1px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $porfolio--color--white;
+            }
+            .section1-bottom__subcontents {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                font-family: "NHDisplayLight";
+                font-size: clamp(12px, 0.8vw, 1vw);
+                line-height: 24px;
+                overflow: hidden;
+                div {
+                    span {
+                        display: flex;
+                    }
+                    &:nth-child(2) {
+                        font-family: "pretendard";
+                    }
+                }
+            }
         }
     }
     .section1-background {
@@ -165,23 +172,27 @@ li {
     color: $porfolio--color--dark;
     fill: $porfolio--color--dark;
     .section2-appeal {
+        max-width: 100%;
+        width: calc(100% - 40px);
         display: flex;
         flex-direction: column;
         .section2-appeal__line {
             display: flex;
-            gap: 1.4rem;
+            gap: 1vw;
             align-items: center;
             font-family: "NHDisplayMideum";
-            font-size: 180px;
-            line-height: 160px;
-            // text-transform: lowercase;
+            font-size: clamp(60px, 8.5vw, 10vw);
+            line-height: clamp(70px, 8vw, 9vw);
             overflow: hidden;
+            svg {
+                width: 5vw;
+                height: 8vw;
+            }
             .section2-videowrap {
                 overflow: hidden;
                 .section2--videobox {
-                    width: 440px;
-                    height: 130px;
-                    line-height: 110px;
+                    width: 200px;
+                    height: 8vw;
                     video {
                         width: 100%;
                         height: 100%;
@@ -190,10 +201,10 @@ li {
                     }
                 }
                 .videobox2 {
-                    width: 900px;
+                    width: 30vw;
                 }
                 .videobox3 {
-                    width: 800px;
+                    width: 40vw;
                 }
             }
             .section2-spanwrap {
@@ -203,102 +214,93 @@ li {
                 }
             }
         }
-        .appeal__line02 {
-            .section2--videobox {
-                width: 745px;
-            }
+        .section2-square {
+            width: 10vw;
+            height: 0vw;
+            background-color: $porfolio--color--dark;
+            border-radius: 10px;
         }
-        .appeal__line04 {
-            .section2--videobox {
-                width: 790px;
-            }
-            .section2-square {
-                width: 218px;
-                height: 130px;
-                background-color: $porfolio--color--white;
-            }
-        }
-        .appeal__line05 {
-            .section2-horizon__line {
-                width: 10px;
-                height: 15px;
-                transition: 0.3s;
-                background-color: $porfolio--color--white;
-            }
-        }
-        .multifly {
+    }
+    .appeal__line05 {
+        .section2-horizon__line {
+            width: 10px;
+            height: 15px;
             transition: 0.3s;
+            background-color: $porfolio--color--white;
         }
+    }
+    .multifly {
+        transition: 0.3s;
     }
 }
 
-.section4 {
+.introduceSection {
     padding: 120px 0 100px 0;
     background-color: $porfolio--color--dark;
-    .section4-container {
+    .introduceSection-container {
         display: flex;
         justify-content: space-between;
         padding: 0 43px;
-        .section4-leftblock {
+        .introduceSection-container-leftblock {
             display: flex;
             flex-direction: column;
             font-family: "NHDisplayMideum";
-            font-size: 200px;
-            line-height: 240px;
+            font-size: 10vw;
+            line-height: 12vw;
             color: $porfolio--color--white;
-            .section4-left-first {
-                text-align: left;
-            }
-            .section4-left-second {
+            .introduceSection-left-first {
                 text-align: right;
             }
-            .section4-left-third {
+            .introduceSection-left-second {
+                text-align: right;
+            }
+            .introduceSection-left-third {
                 text-align: center;
                 margin-top: 2rem;
                 strong {
-                    font-size: 160px;
-                    padding: 33px 110px;
+                    font-size: 8.5vw;
+                    padding: 2vw 7vw;
                     border: 1px solid $porfolio--color--blue;
                     border-radius: 500px;
                     color: $porfolio--color--blue;
                 }
             }
         }
-        .section4-rightblock {
+        .introduceSection-rightblock {
             width: 50%;
-            font-size: 94px;
+            font-size: 5vw;
             font-family: "DMSans";
             color: $porfolio--color--white;
             font-weight: 700;
-            line-height: 86px;
-            .section4-rightblock-line {
+            line-height: 4.5vw;
+            .introduceSection-rightblock-line {
                 display: flex;
                 overflow: hidden;
             }
-            .section4-rightblock-line1 {
+            .introduceSection-rightblock-line1 {
                 justify-content: flex-start;
             }
-            .section4-rightblock-line2 {
+            .introduceSection-rightblock-line2 {
                 justify-content: space-between;
             }
-            .section4-rightblock-line3 {
+            .introduceSection-rightblock-line3 {
                 justify-content: flex-start;
                 gap: 2rem;
             }
-            .section4-rightblock-line4 {
+            .introduceSection-rightblock-line4 {
                 justify-content: space-between;
                 gap: 2rem;
             }
-            .section4-rightblock-line5 {
+            .introduceSection-rightblock-line5 {
                 justify-content: space-between;
             }
-            .section4-rightblock-line6,
-            .section4-rightblock-line7,
-            .section4-rightblock-line8 {
+            .introduceSection-rightblock-line6,
+            .introduceSection-rightblock-line7,
+            .introduceSection-rightblock-line8 {
                 justify-content: flex-start;
                 color: $porfolio--color--blue;
             }
-            .section4-rightblock-line9 {
+            .introduceSection-rightblock-line9 {
                 justify-content: space-between;
                 #creative {
                     color: $porfolio--color--blue;
@@ -317,13 +319,34 @@ li {
         background-color: $porfolio--color--dark;
         border-top: 1px solid $porfolio--color--white;
         border-bottom: 1px solid $porfolio--color--white;
+        &:first-child .bandsection-innertext {
+            animation: moveHorizon1 $better-experience-time linear infinite;
+            span {
+                width: $better-experience-width;
+            }
+        }
+        &:nth-child(2) .bandsection-innertext {
+            animation: moveHorizon2 $ux-ui-design-time linear infinite;
+            span {
+                width: $ux-ui-design-width;
+            }
+        }
+        &:nth-child(3) .bandsection-innertext {
+            animation: moveHorizon3 $responsice-web-time linear infinite;
+            span {
+                width: $responsice-web-width;
+            }
+        }
+        &:last-child .bandsection-innertext {
+            animation: moveHorizon4 $creative-interaction-time linear infinite;
+            span {
+                width: $creative-interaction-width;
+            }
+        }
         &:hover {
             border-top: 1px solid $porfolio--color--white;
             border-bottom: 1px solid $porfolio--color--white;
             background-color: $porfolio--color--darkblue;
-        }
-        &:hover .bandsection-innertext {
-            animation: moveHorizon 40s linear infinite;
         }
         &:hover .bandsection-innertext span {
             color: $porfolio--color--white;
@@ -336,6 +359,7 @@ li {
             align-items: center;
             gap: 50px;
             span {
+                text-align: center;
                 font-family: "NHDisplayRoman";
                 font-size: 90px;
                 line-height: 80px;
@@ -372,7 +396,7 @@ li {
                     color: $porfolio--color--white;
                     .work-inner-number {
                         span {
-                            font-family: "NHDisplayMideum";
+                            font-family: "NHDisplayLight";
                             line-height: 28px;
                             font-size: 24px;
                         }
@@ -409,12 +433,19 @@ li {
                                 gap: 0.6rem;
                                 font-size: 14px;
                             }
+                            .description-detail {
+                                font-family: "pretendard";
+                                display: flex;
+                                align-items: center;
+                                gap: 1rem;
+                                font-size: 14px;
+                            }
                         }
                     }
                     .work-inner-image {
                         position: relative;
                         width: 593px;
-                        height: 324px;
+                        aspect-ratio: 1.83 / 1;
                         img {
                             width: 100%;
                             height: 100%;
@@ -447,7 +478,7 @@ li {
             h2 {
                 /* title */
                 font-family: "NHDisplayBold";
-                font-size: 200px;
+                font-size: 10vw;
                 text-wrap: nowrap;
                 letter-spacing: -10px;
                 color: $porfolio--color--white;
@@ -783,7 +814,7 @@ li {
     }
 }
 
-.contactsection{
+.contactsection {
     height: 100vh;
     background-color: $porfolio--color--darkorange;
 }
@@ -800,5 +831,80 @@ li {
         height: 100%;
         object-fit: cover;
         filter: brightness(0.18);
+    }
+}
+
+/* 미디어쿼리 */
+@include desktop {
+    .section1-bottom__container {
+        margin-top: 300px;
+    }
+    .section2 {
+        padding: 300px 0;
+    }
+    .worksection {
+        padding: 200px 50px 100px 50px;
+    }
+    .worksection-workplace-work {
+        padding: 60px 40px 60px 40px;
+        border-radius: 30px;
+        .workplace-work-inner {
+            .detail-img {
+                width: 410px ;
+                aspect-ratio: 1.39 / 1 ;
+            }
+            .work-inner-number {
+                margin-right: 100px;
+                span {
+                    line-height: 16px;
+                    font-size: 16px;
+                }
+            }
+            .work-inner-description {
+                gap: 30px;
+                .inner-description-worktitle {
+                    h3 {
+                        font-size: 36px !important;
+                        line-height: 26px !important;
+                        font-weight: 200;
+                    }
+                }
+                .inner-description-workcontext {
+                    margin-bottom: 5rem;
+                    p {
+                        font-weight: 300 !important;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+                .inner-description-used {
+                    .description-used-skills {
+                        gap: 0.6rem;
+                        font-size: 14px;
+                    }
+                    .description-detail {
+                        gap: 1rem;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .work-inner-image {
+                width: 410px !important;
+                video {
+                    border-radius: 26px;
+                }
+            }
+            .work-inner-year {
+                li {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include laptap {
+    .section1-bottom__container {
+        margin-top: 250px;
     }
 }
