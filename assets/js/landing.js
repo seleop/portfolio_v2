@@ -31,8 +31,7 @@ const landing = () => {
                     y:100,
                     fontSize: "11vw",
                     rotateX: "360deg",
-                    color: "#E55901",
-                    ease: CustomEase.create("custom", vezier),
+                    color: "#E74400",
                 }
             );
         },
@@ -201,7 +200,7 @@ const loading = () => {
         ease: "power1.out",
     });
 };
-loading();
-setTimeout(landing, 2900)
+// loading();
+// setTimeout(landing, 2900)
 
-// landing();
+landing();

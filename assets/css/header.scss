@@ -25,7 +25,7 @@ header {
     nav {
         ul {
             display: flex;
-            gap: 2vw;
+            gap: 5vw;
             li {
                 a {
                     font-family: "NHDisplayLight";
@@ -45,11 +45,11 @@ header {
         font-family: "NHDisplayRoman";
         strong {
             font-weight: 200;
-            font-size: clamp(16px, 1vw, 1.2vw);
+            font-size: clamp(16px, 0.8vw, 1.2vw);
         }
         span {
             font-family: "NHDisplayLight";
-            font-size: clamp(16px, 0.8vw, 1vw);
+            font-size: clamp(14px, 0.6vw, 1vw);
         }
     }
 }

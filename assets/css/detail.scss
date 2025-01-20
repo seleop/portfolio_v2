@@ -67,6 +67,8 @@
                 align-items: center;
                 gap: 2rem;
                 li {
+                    display: flex;
+                    align-items: center;
                     span {
                         cursor: default;
                     }

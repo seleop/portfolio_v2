@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 body {
@@ -28,6 +29,29 @@ a {
 
 li {
     list-style: none;
+}
+
+.cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    background-color: $porfolio--color--white;
+    mix-blend-mode: difference;
+    z-index: 9000;
+    span {
+        opacity: 0;
+        text-wrap: nowrap;
+        font-size: 80px;
+        font-family: "NHDisplayLight";
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        mix-blend-mode: normal;
+        color: $porfolio--color--white;
+    }
 }
 
 #contents {
@@ -309,7 +333,7 @@ li {
             }
         }
     }
-    .introduceSection-background{
+    .introduceSection-background {
         position: absolute;
         top: -10%;
         left: 0;
@@ -496,19 +520,19 @@ li {
 .clonesection {
     position: relative;
     padding: 200px 150px;
-    .clonesection-background{
+    .clonesection-background {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0;
-        img{
+        img {
             width: 130%;
             height: 130%;
             object-fit: cover;
-            object-position:50% 100%;
+            object-position: 50% 100%;
             border-radius: 200px 200px 0 0;
-            filter:brightness(1.1)
+            filter: brightness(1.1);
         }
     }
     .clonesection-container {
@@ -525,15 +549,48 @@ li {
             gap: 40px;
             z-index: 10;
             .container-grid-works {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 padding: 20px;
-                border: 1px solid #fcfcfcd0;
+                border: 1px solid #1b1b1b0e;
                 border-radius: 40px;
                 background-color: #fcfcfc9a;
                 backdrop-filter: blur(15px);
+                &:hover .grid-works-imgwrap{
+                    opacity: 0;
+                }
+                &:hover .grid-works-link {
+                    opacity: 1;
+                }
+                .grid-works-link{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: .5s;
+                    a {
+                        padding: 1rem 2rem;
+                        font-family: "NHDisplayLight";
+                        text-wrap: nowrap;
+                        font-size: 28px;
+                        border: 1px solid $porfolio--color--black;
+                        border-radius: 14px;
+                        transition: .5s;
+                        &:hover {
+                            border: 1px solid $porfolio--color--white;
+                            background-color: $porfolio--color--black;
+                            color: $porfolio--color--white;
+                        }
+                    }
+                }
                 .grid-works-imgwrap {
                     height: 88%;
+                    transition: 0.5s;
                     img {
                         width: 100%;
                         height: 100%;
@@ -548,6 +605,7 @@ li {
                     justify-content: space-between;
                     align-items: center;
                     font-family: "pretendard";
+                    transition: 0.5s;
                     strong {
                         font-size: 20px;
                         font-weight: 600;
@@ -698,11 +756,15 @@ li {
     height: 100vh;
     font-family: "NHDisplayBold";
     color: $porfolio--color--dark;
-    background-color: $porfolio--color--darkorange;
+    background-color: $porfolio--color--orange;
+    overflow: hidden;
     .myselfsection-imgwrapper {
         position: absolute;
         z-index: 20;
         overflow: hidden;
+        &.hide {
+            display: none;
+        }
         &.myselfsection-imgwrapper01 {
             left: 150px;
             bottom: 5%;
@@ -727,6 +789,7 @@ li {
             img {
                 width: 100%;
                 height: 100%;
+                border-radius: 50px;
                 object-fit: cover;
                 object-position: top;
             }
@@ -817,25 +880,131 @@ li {
         bottom: 30%;
         right: 2%;
         overflow: hidden;
+        z-index: 10;
         .myselfsection-contact-inner {
+            position: relative;
             border: 5px solid $porfolio--color--black;
             border-radius: 200px;
-            cursor: pointer;
+            z-index: 10;
+            overflow: hidden;
+            color: $porfolio--color--dark;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                height: 0%;
+                width: 100%;
+                transition: height .5s;
+                background-color: $porfolio--color--black;
+                z-index: -1;
+            }
+            &:hover::before {
+                height: 100%;
+            }
+            &:hover {
+                color: $porfolio--color--orange;
+                transition: .5s;
+            }
             strong {
                 font-family: "Caveat";
                 padding: 40px 80px;
-                color: $porfolio--color--dark;
                 font-size: 130px;
-                cursor: pointer;
             }
         }
+
     }
 }
 
-.contactsection {
-    height: 100vh;
-    background-color: $porfolio--color--darkorange;
-}
+// .contactsection {
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     background-color: $porfolio--color--orange;
+//     .contactsection-left {
+//         position: relative;
+//         width: 60%;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         .contactsection-left-inner {
+//             padding: 0 150px;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: space-between;
+//             gap: 68px;
+//             .left-inner-title {
+//                 font-family: "NHDisplayBold";
+//                 h2 {
+//                     border-top: 8px solid $porfolio--color--black;
+//                     font-size: 180px;
+//                 }
+//             }
+//             .left-inner-contactlist {
+//                 display: flex;
+//                 flex-direction: column;
+//                 gap: 20px;
+//                 font-family: "NHDisplayRoman";
+//                 h3 {
+//                     display: inline-block;
+//                     font-size: 30px;
+//                     border-top: 3px solid $porfolio--color--black;
+//                 }
+//                 span {
+//                     font-family: "NHDisplayLight";
+//                     font-size: 35px;
+//                 }
+//             }
+//         }
+//         .left-inner-qr {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             position: absolute;
+//             bottom: 3%;
+//             right: 3%;
+//             color: $porfolio--color--white;
+//             .qrcode {
+//                 width: 160px;
+//                 height: 160px;
+//                 border-radius: 20px;
+//                 background-color: $porfolio--color--white;
+//                 img {
+//                     padding: 20px;
+//                     width: 100%;
+//                     height: 100%;
+//                     object-fit: cover;
+//                 }
+//             }
+//             span {
+//                 font-family: "NHDisplayMideum";
+//                 font-size: 20px;
+//             }
+//         }
+//     }
+//     .contactsection-right {
+//         width: 40%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         color: $porfolio--color--white;
+//         background-color: $porfolio--color--dark;
+//         .addfriends {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             gap: 30px;
+//             & h3 {
+//                 font-family: "NHDisplayRoman";
+//                 font-size: 35px;
+//             }
+//             span {
+//                 font-family: "NHDisplayRoman";
+//                 font-size: 25px;
+//             }
+//         }
+//     }
+// }
 
 /* work section background 스타일 */
 .workbgrwrap {
@@ -868,8 +1037,8 @@ li {
         border-radius: 30px;
         .workplace-work-inner {
             .detail-img {
-                width: 410px ;
-                aspect-ratio: 1.39 / 1 ;
+                width: 410px;
+                aspect-ratio: 1.39 / 1;
             }
             .work-inner-number {
                 margin-right: 100px;

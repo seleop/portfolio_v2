@@ -9,6 +9,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  display: none !important;
   justify-content: center;
   align-items: center;
   background-color: #fcfcfc;

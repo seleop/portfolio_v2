@@ -14,32 +14,55 @@ const settingScroll = () => {
     });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {
-        lenis.raf(time * 150);
+        lenis.raf(time * 300);
     });
-    gsap.ticker.lagSmoothing(0);
+    gsap.ticker.lagSmoothing(1000, 16);
 };
 const refleshPage = () => {
-    window.onbeforeunload = function () {
+    window.addEventListener('beforeunload', () => {
         window.scrollTo(0, 0);
-    };
+    })
 };
-// const lockScrolling = () => {
-//     window.addEventListener("wheel", preventScroll, { passive : false})
-//     window.addEventListener("scroll", preventScroll, { passive : false})
-// }
-// const unlockScrolling = () => {
-//     window.removeEventListener("wheel", preventScroll, { passive : false })
-//     window.removeEventListener("scroll", preventScroll, { passive : false })
-// }
-// function preventScroll(e){
-//     e.preventDefault();
-// }
+const cursorMove = () => {
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+        cursor.style.top = `${y}px`;
+        cursor.style.left = `${x}px`;
+        if((e.target.tagName.toLowerCase() === 'a' ||
+            e.target.tagName.toLowerCase() === 'button' ||
+            e.target.tagName.toLowerCase() === 'i' ||
+            e.target.classList.contains('contactme')
+        )){
+            gsap.to(cursor, {
+                scale:0.3,
+                duration :0.3
+            })
+            gsap.to(".cursor> span", {
+                opacity:1,
+                yPercent:30,
+                duration :0.3
+            })
+        } else {
+            gsap.to(cursor, {
+                scale:1,
+                duration:0.3
+            })
+            gsap.to(".cursor> span", {
+                opacity:0,
+                duration :0.3
+            })
+        }
+    })
+}
 
 const functionInit = () => {
     refleshPage();
     settingScroll();
     slowVideo(section1Video, 0.7);
     workVideos.forEach((e)=> {slowVideo(e, 0.6);})
+    cursorMove()
 };
 
 /* 함수 실행 */

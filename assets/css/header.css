@@ -27,7 +27,7 @@ header #logo {
 }
 header nav ul {
   display: flex;
-  gap: 2vw;
+  gap: 5vw;
 }
 header nav ul li a {
   font-family: "NHDisplayLight";
@@ -45,9 +45,9 @@ header .clock {
 }
 header .clock strong {
   font-weight: 200;
-  font-size: clamp(16px, 1vw, 1.2vw);
+  font-size: clamp(16px, 0.8vw, 1.2vw);
 }
 header .clock span {
   font-family: "NHDisplayLight";
-  font-size: clamp(16px, 0.8vw, 1vw);
+  font-size: clamp(14px, 0.6vw, 1vw);
 }/*# sourceMappingURL=header.css.map */

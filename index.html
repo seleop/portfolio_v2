@@ -1,9 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hi! here is JHD's</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+        <title>JHD Portfolio.</title>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="./assets/css/style.css" />
         <script>
@@ -15,16 +32,25 @@
     </head>
     <body>
         <div id="loading">
+            <!-- LOADING -->
             <div class="nowloading"></div>
             <span id="loading__name">Jung, Heedo.</span>
         </div>
-        <div id="contents">
+        <!-- LOADING END -->
+        <div id="contents" cursor="none">
+            <!-- 사용자에게 보여지는 핵심 부분 -->
+
+            <div class="cursor">
+                <span>Click</span>
+            </div>
+
             <header>
-                <h1 id="logo">J.HEEDO</h1>
+                <div id="logobox">
+                    <h1 id="logo" onclick="location.href='index.html'">J.HEEDO</h1>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="">Home</a></li>
-                        <li><a href="">Appeal</a></li>
                         <li><a href="">Skills</a></li>
                         <li><a href="">Works</a></li>
                         <li><a href="">Contact</a></li>
@@ -179,7 +205,7 @@
             </section>
             <section class="introduceSection">
                 <div class="introduceSection-background">
-                    <img src="./assets/img/background.webp" alt="background">
+                    <img src="./assets/img/background.webp" alt="background" />
                 </div>
                 <div class="introduceSection-container">
                     <div class="introduceSection-container-leftblock">
@@ -459,15 +485,23 @@
                                                 </div>
                                                 <ul class="detail-link">
                                                     <li>
-                                                        <a href="">WEBPAGE<i class="bx bx-link-external"></i></a>
+                                                        <a href="https://seleop.github.io/EsteeLauder/" target="_blank"
+                                                            >WEBPAGE<i class="bx bx-link-external"></i
+                                                        ></a>
                                                     </li>
                                                     <span>|</span>
                                                     <li>
-                                                        <a href="">GITHUB<i class="bx bxl-github"></i></a>
+                                                        <a href="https://github.com/seleop/EsteeLauder/tree/main" target="_blank"
+                                                            >GITHUB<i class="bx bxl-github"></i
+                                                        ></a>
                                                     </li>
                                                     <li><span>|</span></li>
                                                     <li>
-                                                        <a href="">FIGMA<i class="bx bxl-figma"></i></a>
+                                                        <a
+                                                            href="https://www.figma.com/design/vNr3jUW2KGGJfTTpiGVR9A/Estee-Lauder?t=0IYEdhh4BdOMZKMF-0"
+                                                            target="_blank"
+                                                            >FIGMA<i class="bx bxl-figma"></i
+                                                        ></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -514,7 +548,7 @@
                                 <div class="work-inner-image">
                                     <div class="section6-detail detail-jheedo">
                                         <div class="detail-bgr">
-                                            <img loading="lazy" src="./assets/workimg/esteelauderbgr.png" alt="esteelauderbgr" />
+                                            <img loading="lazy" src="./assets/workimg/jhdbackground.png" alt="jhdbackgroundimage" />
                                         </div>
                                         <div class="detail-inner">
                                             <div class="detail-img">
@@ -537,15 +571,21 @@
                                                 </div>
                                                 <ul class="detail-link">
                                                     <li>
-                                                        <a href="">WEBPAGE<i class="bx bx-link-external"></i></a>
+                                                        <a href="https://seleop.github.io/J.HEEDO/" target="_blank"
+                                                            >WEBPAGE<i class="bx bx-link-external"></i
+                                                        ></a>
                                                     </li>
                                                     <span>|</span>
                                                     <li>
-                                                        <a href="">GITHUB<i class="bx bxl-github"></i></a>
+                                                        <a href="https://github.com/seleop/J.HEEDO" target="_blank">GITHUB<i class="bx bxl-github"></i></a>
                                                     </li>
                                                     <li><span>|</span></li>
                                                     <li>
-                                                        <a href="">FIGMA<i class="bx bxl-figma"></i></a>
+                                                        <a
+                                                            href="https://www.figma.com/design/UDENYlwRNN0M7AfqNyGqXP/J.HEEDO?m=auto&t=H6CvsgRdpStpUoUy-6"
+                                                            target="_blank"
+                                                            >FIGMA<i class="bx bxl-figma"></i
+                                                        ></a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -592,7 +632,7 @@
                                 <div class="work-inner-image">
                                     <div class="section6-detail detail-esteeluader">
                                         <div class="detail-bgr">
-                                            <img loading="lazy" src="./assets/workimg/esteelauderbgr.png" alt="esteelauderbgr" />
+                                            <img loading="lazy" src="./assets/workimg/lenovobackground.png" alt="lenovobackgroundimage" />
                                         </div>
                                         <div class="detail-inner">
                                             <div class="detail-img">
@@ -616,15 +656,42 @@
                                                 </div>
                                                 <ul class="detail-link">
                                                     <li>
-                                                        <a href="">WEBPAGE<i class="bx bx-link-external"></i></a>
+                                                        <a href="https://seleop.github.io/lenovo/" target="_blank"
+                                                            >WEBPAGE<i class="bx bx-link-external"></i
+                                                        ></a>
                                                     </li>
                                                     <span>|</span>
                                                     <li>
-                                                        <a href="">GITHUB<i class="bx bxl-github"></i></a>
+                                                        <a href="https://github.com/seleop/lenovo" target="_blank">GITHUB<i class="bx bxl-github"></i></a>
                                                     </li>
                                                     <li><span>|</span></li>
                                                     <li>
-                                                        <a href="">FIGMA<i class="bx bxl-figma"></i></a>
+                                                        <a
+                                                            href="https://drive.google.com/file/d/19Nl_vezzj6dqLsK_UNMQeyQxuijgSRDB/view?usp=sharing"
+                                                            target="_blank"
+                                                            >PHOTOSHOP
+                                                            <svg
+                                                                width="20"
+                                                                height="20"
+                                                                viewBox="0 0 60 60"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            >
+                                                                <rect width="60" height="60" fill="url(#pattern0_165_3)" />
+                                                                <defs>
+                                                                    <pattern id="pattern0_165_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                                        <use xlink:href="#image0_165_3" transform="scale(0.0166667)" />
+                                                                    </pattern>
+                                                                    <image
+                                                                        id="image0_165_3"
+                                                                        width="60"
+                                                                        height="60"
+                                                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAACTElEQVR4nO2avWsUQRTAN5rCDyRERCxMJRIT8gdYCFpYiEgqP1LZChJiIeFQiCIqgliJpVUQIZeQWGgRTBCsUkWtImghNmpQE9ME/PrJwwkO4+buJruReef7wTQzb2ffj5uZm9ndLDMMwzAMI2mADmAMWCI9JKcJoLNM2U+kz2fJtQzhMfRQLUN4CT18KUNYFSYcC8qIFgxBGVlRUIYJx4IyogVDUEZWFAreANgk+1zgHPCm6YVz5IebRpjfQu1eac3pbwPwqFmELwTNX4GXwADQ4sXtAb41o7DPQBA7zd8suNPZVaACXAfG5VCAQuHnQey1YCRcBDavksMW4DLwQ5PwchArq/YKfQ3m0q9J+H0QO+TqnwT1Z9y8l2H8AjgVLHivtAjfDmJHXf2QV9eTc50M45PAYVcmUxf+6eS2enHt3pOUK179LmC+3j1TEt4HnPDKIZHI6fOO18XDoG07cNatzu+SFm4EYDBnyB6tEb8XOA88UyMMbAQO1ph/34FbtR6zuj4qboqkIQz0AY+9MuVW2kUaQ2RmgBvAMZnrOfnc07JKrwX55av+hgQ4rV34gZOSMrdKTK93jyPahfd713cBH4L218AOL6aiXfh+0Mc24Lj7a+qVI6fX1ga81S4sXJJtY508dgJPqcO6C/NnyyflLmtn1u2ju1cWKbcJOQDcdEdHUhBOChOOBWVEC4agjKwoKMOEY0EZ0YIhKCP7zz5qWSxDeAI9jJQh3Ok++kqdj8DuwsLe13jVmFce/xDJaaQ0WcMwDMMwsvXiF++w/jwEBvVIAAAAAElFTkSuQmCC"
+                                                                    />
+                                                                </defs>
+                                                            </svg>
+                                                        </a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -643,7 +710,7 @@
             </section>
             <section class="clonesection section7">
                 <div class="clonesection-background">
-                    <img src="./assets/img/whitebackground.webp" alt="backgroundimg">
+                    <img src="./assets/img/whitebackground.webp" alt="backgroundimg" />
                 </div>
                 <div class="clonesection-container">
                     <div class="clonesection-container-title">
@@ -658,6 +725,10 @@
                                 <strong>백상 갤러리 샵</strong>
                                 <span>01</span>
                             </div>
+                            <div class="grid-works-link">
+                                <a href="">View website</a>
+                                <a href="">Source code</a>
+                            </div>
                         </div>
                         <div class="container-grid-works cc_works2">
                             <div class="grid-works-imgwrap">
@@ -666,6 +737,10 @@
                             <div class="grid-works-textwrap">
                                 <strong>visit busan</strong>
                                 <span>02</span>
+                            </div>
+                            <div class="grid-works-link">
+                                <a href="">View website</a>
+                                <a href="">Source code</a>
                             </div>
                         </div>
                         <div class="container-grid-works cc_works3">
@@ -676,6 +751,10 @@
                                 <strong>CJ 프레시웨이</strong>
                                 <span>03</span>
                             </div>
+                            <div class="grid-works-link">
+                                <a href="">View website</a>
+                                <a href="">Source code</a>
+                            </div>
                         </div>
                         <div class="container-grid-works cc_works4">
                             <div class="grid-works-imgwrap">
@@ -684,6 +763,10 @@
                             <div class="grid-works-textwrap">
                                 <strong>노란 풍선</strong>
                                 <span>04</span>
+                            </div>
+                            <div class="grid-works-link">
+                                <a href="">View website</a>
+                                <a href="">Source code</a>
                             </div>
                         </div>
                         <div class="container-grid-works cc_works5">
@@ -694,14 +777,22 @@
                                 <strong>인비트로스</strong>
                                 <span>05</span>
                             </div>
+                            <div class="grid-works-link">
+                                <a href="">View website</a>
+                                <a href="">Source code</a>
+                            </div>
                         </div>
                         <div class="container-grid-works cc_works6">
                             <div class="grid-works-imgwrap">
-                                <img loading="lazy" src="./assets/workimg/baeksang.png" alt="baeksang-gallary" />
+                                <img loading="lazy" src="./assets/workimg/르주르.png" alt="lejours" />
                             </div>
                             <div class="grid-works-textwrap">
-                                <strong>곧 만들 아무거나</strong>
+                                <strong>Le Jour</strong>
                                 <span>06</span>
+                            </div>
+                            <div class="grid-works-link">
+                                <a href="">View website</a>
+                                <a href="">Source code</a>
                             </div>
                         </div>
                     </div>
@@ -826,15 +917,56 @@
                     <li id="since"><span>SINCE</span></li>
                     <li id="dateSince"><span>'08.29.-$NOW'</span></li>
                 </ul>
-                <div class="myselfsection-contact">
-                    <div onclick="location.href='#'" class="myselfsection-contact-inner">
-                        <strong>CONTACT ME?</strong>
+                <div onclick="location.href='https://github.com/seleop'" target="_blank" class="myselfsection-contact">
+                    <div class="myselfsection-contact-inner">
+                        <strong class="contactme">CONTACT ME?</strong>
                     </div>
                 </div>
             </section>
-
-            <section class="contactsection"></section>
+            <!-- <section class="contactsection">
+                <div class="contactsection-left">
+                    <div class="contactsection-left-inner">
+                        <div class="left-inner-title contacts">
+                            <h2>Contacts.</h2>
+                        </div>
+                        <div class="left-inner-contactlist phonenumber">
+                            <div>
+                                <h3>Phone Number</h3>
+                            </div>
+                            <span>010-2262-4564</span>
+                        </div>
+                        <div class="left-inner-contactlist emailaddress">
+                            <div>
+                                <h3>Email address</h3>
+                            </div>
+                            <span>eedo9987@gmail.com</span>
+                        </div>
+                        <div class="left-inner-contactlist github">
+                            <div>
+                                <h3>Github</h3>
+                            </div>
+                            <span>github.com/seleop</span>
+                        </div>
+                        <div class="left-inner-qr">
+                            <div class="qrcode">
+                                <img src="./assets/img/figmaQR.png" alt="figmaQRcode">
+                            </div>
+                            <span>Portfolio Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactsection-right">
+                    <div class="addfriends">
+                        <h3>ADD FRIENDS ME!</h3>
+                        <div class="addfriends-qr">
+                            <img src="./assets/img/kakaotalkQR.png" alt="kakaotalkQRcode" />
+                        </div>
+                        <span>@kakaotalk</span>
+                    </div>
+                </div>
+            </section> -->
         </div>
+        <!-- contents end -->
 
         <script src="https://unpkg.com/split-type"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
