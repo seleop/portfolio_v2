@@ -59,7 +59,7 @@ const modifyAnimation = () => {
     gsap.from("#videobox1", { scrollTrigger: settings, x: -450, ease: CustomEase.create("custom", vezier) });
     gsap.from("#videobox2", { scrollTrigger: settings, x: -900, ease: CustomEase.create("custom", vezier) });
     gsap.from("#videobox3", { scrollTrigger: settings, x: -800, ease: CustomEase.create("custom", vezier) });
-    gsap.to(".skillssection", { scrollTrigger: settings, backgroundColor: "#121212" });
+    gsap.to(".skillssection", { scrollTrigger: settings, backgroundColor: "#000" });
     gsap.to(".skillssection", { scrollTrigger: modifyColorSettings, color: "#fff" });
     gsap.to(".skillssection", { scrollTrigger: modifyColorSettings, fill: "#fff" });
     gsap.from(".skillssection-background", { scrollTrigger: {
