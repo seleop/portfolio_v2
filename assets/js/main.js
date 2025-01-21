@@ -33,7 +33,7 @@ const cursorMove = () => {
         if((e.target.tagName.toLowerCase() === 'a' ||
             e.target.tagName.toLowerCase() === 'button' ||
             e.target.tagName.toLowerCase() === 'i' ||
-            e.target.classList.contains('contactme')
+            e.target.classList.contains('click')
         )){
             gsap.to(cursor, {
                 scale:0.3,

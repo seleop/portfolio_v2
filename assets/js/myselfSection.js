@@ -15,6 +15,8 @@ const transSection = () => {
     gsap.to("#since", {scrollTrigger:trigger, x:-1000, opacity:0,yPercent:300, duration : 2,ease: CustomEase.create("custom", vezier)})
     gsap.from(".myselfsection-contact-inner", {scrollTrigger:trigger, yPercent:110, delay:2.2, duration : 1.5,ease: "power3.out"})
     gsap.to(".textwrap-sub02 > li", {scrollTrigger:trigger, xPercent: -100,x:1350,yPercent:-340, marginBottom:"-20px", fontSize:"68px", duration:2, delay:1.25,stagger:{axios:"y", amount:0.05}, ease: CustomEase.create("custom", vezier)})
+    gsap.from(".myselfsection-resume", {scrollTrigger:trigger, yPercent:110, delay:2.5, duration : 1.5,ease: CustomEase.create("custom", vezier)})
+    gsap.from(".resumeimg", {scrollTrigger:trigger, yPercent:110, delay:2.8, duration : 1.5,ease: CustomEase.create("custom", vezier)})
     textBoxs.forEach((e)=>{
         gsap.from(e.querySelectorAll('li > span'), {
             scrollTrigger:{
@@ -29,4 +31,15 @@ const transSection = () => {
     gsap.from(".myselfsection-myimg", {scrollTrigger:{trigger:".myselfsection-imgwrapper01", start:"top bottom"},yPercent:100, duration:2})
 }
 
-transSection()
+const resumeRotate = () => {
+    const text = document.querySelector('.resume-container p');
+    const degree = 360 / text.innerHTML.length - 0.25
+    text.innerHTML = text.innerHTML.split("").map((char, index) => `<span style="transform : rotate(${index * degree}deg);">${char}</span>`).join(" ")
+}
+
+const myselfSectionInit = () => {
+    resumeRotate()
+    transSection()
+}
+
+myselfSectionInit()

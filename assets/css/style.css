@@ -105,6 +105,14 @@
     transform: translate(0, 0);
   }
 }
+@keyframes rotateResume {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 /* Breakpoints */
 /* horizon width */
 /* animation time */
@@ -330,7 +338,8 @@ li {
      object-fit: cover;
 }
 
-.section2 {
+.skillssection {
+  position: relative;
   margin: 300px 0 0 0;
   display: flex;
   align-items: center;
@@ -339,13 +348,27 @@ li {
   color: #121212;
   fill: #121212;
 }
-.section2 .section2-appeal {
+.skillssection .skillssection-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.skillssection .skillssection-background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.skillssection .skillssection-appeal {
   max-width: 100%;
   width: calc(100% - 40px);
   display: flex;
   flex-direction: column;
 }
-.section2 .section2-appeal .section2-appeal__line {
+.skillssection .skillssection-appeal .skillssection-appeal__line {
   display: flex;
   gap: 1vw;
   align-items: center;
@@ -354,56 +377,75 @@ li {
   line-height: clamp(70px, 8vw, 9vw);
   overflow: hidden;
 }
-.section2 .section2-appeal .section2-appeal__line svg {
+.skillssection .skillssection-appeal .skillssection-appeal__line svg {
   width: 5vw;
   height: 8vw;
 }
-.section2 .section2-appeal .section2-appeal__line .section2-videowrap {
+.skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-videowrap {
   overflow: hidden;
 }
-.section2 .section2-appeal .section2-appeal__line .section2-videowrap .section2--videobox {
+.skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-videowrap .skillssection--videobox {
   width: 200px;
   height: 8vw;
 }
-.section2 .section2-appeal .section2-appeal__line .section2-videowrap .section2--videobox video {
+.skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-videowrap .skillssection--videobox video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
 }
-.section2 .section2-appeal .section2-appeal__line .section2-videowrap .videobox2 {
+.skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-videowrap .videobox2 {
   width: 30vw;
 }
-.section2 .section2-appeal .section2-appeal__line .section2-videowrap .videobox3 {
+.skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-videowrap .videobox3 {
   width: 40vw;
 }
-.section2 .section2-appeal .section2-appeal__line .section2-spanwrap {
+.skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-spanwrap {
   overflow: hidden;
 }
-.section2 .section2-appeal .section2-appeal__line .section2-spanwrap span {
+.skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-spanwrap span {
   display: block;
 }
-.section2 .section2-appeal .section2-square {
+.skillssection .skillssection-appeal .skillssection-square {
+  position: relative;
   width: 10vw;
   height: 0vw;
   background-color: #121212;
   border-radius: 10px;
+  z-index: 1;
 }
-.section2 .appeal__line05 .section2-horizon__line {
+.skillssection .appeal__line05 .skillssection-horizon__line {
   width: 10px;
   height: 15px;
   transition: 0.3s;
   background-color: #fcfcfc;
 }
-.section2 .multifly {
+.skillssection .multifly {
   transition: 0.3s;
 }
 
 .introduceSection {
   position: relative;
   padding: 120px 0 100px 0;
-  background-color: #121212;
+  background-color: #000;
+}
+.introduceSection .introduceSection-background {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.introduceSection .introduceSection-background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  filter: brightness(1);
 }
 .introduceSection .introduceSection-container {
   display: flex;
@@ -476,23 +518,6 @@ li {
 .introduceSection .introduceSection-container .introduceSection-rightblock .introduceSection-rightblock-line9 #creative {
   color: #15f5ba;
 }
-.introduceSection .introduceSection-background {
-  position: absolute;
-  top: -10%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-}
-.introduceSection .introduceSection-background img {
-  width: 150%;
-  height: 150%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 0%;
-     object-position: 50% 0%;
-  filter: brightness(0.7);
-}
 
 /* section5 */
 .bandsection .bandsection-horizonLine {
@@ -546,7 +571,7 @@ li {
 
 /* section6 */
 .worksection {
-  padding: 200px 150px 100px 150px;
+  padding: 200px 150px 220px 150px;
   position: relative;
 }
 .worksection .worksection-container {
@@ -1055,10 +1080,71 @@ li {
   color: #E74400;
   transition: 0.5s;
 }
-.myselfsection .myselfsection-contact .myselfsection-contact-inner strong {
+.myselfsection .myselfsection-contact .myselfsection-contact-inner a {
   font-family: "Caveat";
   padding: 40px 80px;
   font-size: 130px;
+}
+.myselfsection .myselfsection-resume {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 2%;
+  right: 2%;
+  z-index: 12;
+}
+.myselfsection .myselfsection-resume .resume-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myselfsection .myselfsection-resume .resume-container p {
+  font-size: 0.8em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateResume 20s linear infinite;
+}
+.myselfsection .myselfsection-resume .resume-container p span {
+  font-family: "NHDisplayBold";
+  left: 50%;
+  position: absolute;
+  font-size: 1.4em;
+  transform-origin: 0 120px;
+  z-index: 10;
+}
+.myselfsection .myselfsection-resume .resume-container .resume-img {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.myselfsection .myselfsection-resume .resume-container .resume-img::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  transition: 0.5s;
+  background-color: #121212;
+}
+.myselfsection .myselfsection-resume .resume-container .resume-img:hover::before {
+  height: 100%;
+}
+.myselfsection .myselfsection-resume .resume-container .resume-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateY(10%);
+  filter: contrast(1.3) brightness(0.9) grayscale(0);
 }
 
 /* work section background 스타일 */
@@ -1082,7 +1168,7 @@ li {
   .section1-bottom__container {
     margin-top: 300px;
   }
-  .section2 {
+  .skillssection {
     padding: 300px 0;
   }
   .worksection {

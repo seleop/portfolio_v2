@@ -107,17 +107,17 @@ gsap.from("#and",{
     delay:0.4,
     ease: CustomEase.create("custom", vezier),
 })
-gsap.from(".introduceSection-background > img",{
-    scrollTrigger:{trigger:".introduceSection-background > img", start :"top 100%", end :"top top   ", scrub:2},
-    opacity : 0,
-    ease: CustomEase.create("custom", vezier),
-})
-gsap.from(".introduceSection-background > img",{
-    scrollTrigger:afterSettings,
-    objectPosition : "50% 100%",
-    delay:0.4,
-    ease: CustomEase.create("custom", vezier),
-})
+// gsap.from(".introduceSection-background > img",{
+//     scrollTrigger:{trigger:".introduceSection-background > img", start :"top 100%", end :"top top   ", scrub:2},
+//     opacity : 0,
+//     ease: CustomEase.create("custom", vezier),
+// })
+// gsap.from(".introduceSection-background > img",{
+//     scrollTrigger:afterSettings,
+//     objectPosition : "50% 100%",
+//     delay:0.4,
+//     ease: CustomEase.create("custom", vezier),
+// })
 gsap.from(creative.chars,{
     scrollTrigger:{
         trigger : ".introduceSection-rightblock-line1",
@@ -134,3 +134,4 @@ gsap.from(creative.chars,{
     ease: CustomEase.create("custom", vezier),
 })
 gsap.from('.introduceSection-left-third > strong', {scrollTrigger:afterSettings, color:"#E55901", border:"1px solid #E55901"})
+new Ukiyo(".ukiyo")
