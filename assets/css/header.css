@@ -12,7 +12,8 @@ header {
   justify-content: space-between;
   color: #fcfcfc;
   background-color: rgba(0, 0, 0, 0.4666666667);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   transition: 0.3s;
   z-index: 1000;
 }
@@ -49,4 +50,4 @@ header .clock strong {
 header .clock span {
   font-family: "NHDisplayLight";
   font-size: clamp(14px, 0.6vw, 1vw);
-}
+}/*# sourceMappingURL=header.css.map */
