@@ -29,11 +29,11 @@ header nav ul {
   display: flex;
   gap: 5vw;
 }
-header nav ul li a {
+header nav ul li {
   font-family: "NHDisplayLight";
   font-size: clamp(16px, 1vw, 1.1vw);
 }
-header nav ul li a:hover {
+header nav ul li:hover {
   color: #15f5ba;
 }
 header .clock {

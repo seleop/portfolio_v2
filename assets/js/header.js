@@ -15,8 +15,17 @@ const getTime = () => {
     const hours = date.getHours();
     const clock = document.querySelector("#clock");
     const today = document.querySelector("#clock-date");
-    clock.innerHTML = `${hours} : ${minutes} : ${seconds}`
+    clock.innerHTML = `${hours} : ${minutes} : ${seconds}`;
     today.innerHTML = date.toDateString();
 };
-getTime()
-setInterval(() => {getTime()}, 1000);
+
+
+const headerFunctionInit = () => {
+    getTime();
+    setInterval(() => {
+        getTime();
+    }, 1000);
+}
+
+
+headerFunctionInit()

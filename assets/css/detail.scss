@@ -91,6 +91,8 @@
         }
         .detail-img {
             position: absolute;
+            width: 100%;
+            aspect-ratio: 1.83 / 1;
             z-index: 10;
             img {
                 width: 100%;
