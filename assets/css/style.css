@@ -80,10 +80,12 @@
 }
 @keyframes imgViewing {
   0% {
-    object-position: top;
+    -o-object-position: top;
+       object-position: top;
   }
   100% {
-    object-position: bottom;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
 }
 @keyframes floatSway {
@@ -332,7 +334,8 @@ li {
   top: 0;
   left: 0;
   z-index: -1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .skillssection {
@@ -356,9 +359,11 @@ li {
 .skillssection .skillssection-background img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
-  filter: brightness(0.2) contrast(1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  filter: brightness(0.5) contrast(1);
 }
 .skillssection .skillssection-appeal {
   max-width: 100%;
@@ -389,7 +394,8 @@ li {
 .skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-videowrap .skillssection--videobox video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 .skillssection .skillssection-appeal .skillssection-appeal__line .skillssection-videowrap .videobox2 {
@@ -438,9 +444,11 @@ li {
 .introduceSection .introduceSection-background img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 0%;
-  filter: brightness(0.3) contrast(1.05);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
+  filter: brightness(0.5) contrast(1);
 }
 .introduceSection .introduceSection-container {
   display: flex;
@@ -582,7 +590,8 @@ li {
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work {
   padding: 60px 30px 60px 30px;
   border-bottom: 1px solid #fcfcfc;
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   border-radius: 50px;
 }
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner {
@@ -637,12 +646,12 @@ li {
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-image {
   position: relative;
   width: 593px;
-  aspect-ratio: 1.83/1;
 }
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 26px;
 }
 .worksection .worksection-container .worksection-workplace .worksection-workplace-work .workplace-work-inner .work-inner-year li {
@@ -687,8 +696,10 @@ li {
 .clonesection .clonesection-background img {
   width: 130%;
   height: 130%;
-  object-fit: cover;
-  object-position: 50% 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
   border-radius: 200px 200px 0 0;
   filter: brightness(1.1);
 }
@@ -715,7 +726,8 @@ li {
   border: 1px solid rgba(27, 27, 27, 0.0549019608);
   border-radius: 40px;
   background-color: rgba(252, 252, 252, 0.6039215686);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
 }
 .clonesection .clonesection-container .clonesection-container-grid .container-grid-works:hover .grid-works-imgwrap {
   opacity: 0;
@@ -755,7 +767,8 @@ li {
 .clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-imgwrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 24px;
 }
 .clonesection .clonesection-container .clonesection-container-grid .container-grid-works .grid-works-textwrap {
@@ -858,13 +871,16 @@ li {
 .othersection .othersection-works .othersection-works-inner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .othersection .othersection-works .othersection-works-inner video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 0%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
 }
 .othersection .othersection-title {
   display: flex;
@@ -899,8 +915,10 @@ li {
 .othersection .othersection-bgr video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 0%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
   filter: brightness(0.8);
 }
 
@@ -946,8 +964,10 @@ li {
   width: 100%;
   height: 100%;
   border-radius: 50px;
-  object-fit: cover;
-  object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .myselfsection .myselfsection-skills-textwrap {
   flex-direction: column;
@@ -1122,7 +1142,8 @@ li {
 .myselfsection .myselfsection-resume .resume-container .resume-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: translateY(10%);
   filter: contrast(1.3) brightness(0.9) grayscale(0);
 }
@@ -1138,7 +1159,8 @@ li {
 .workbgrwrap video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   filter: brightness(0.18);
 }
 
@@ -1206,4 +1228,4 @@ li {
   .section1-bottom__container {
     margin-top: 250px;
   }
-}
+}/*# sourceMappingURL=style.css.map */

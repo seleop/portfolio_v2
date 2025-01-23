@@ -27,12 +27,10 @@ header {
             display: flex;
             gap: 5vw;
             li {
-                a {
-                    font-family: "NHDisplayLight";
-                    font-size: clamp(16px, 1vw, 1.1vw);
-                    &:hover {
-                        color: $porfolio--color--blue;
-                    }
+                font-family: "NHDisplayLight";
+                font-size: clamp(16px, 1vw, 1.1vw);
+                &:hover {
+                    color: $porfolio--color--blue;
                 }
             }
         }

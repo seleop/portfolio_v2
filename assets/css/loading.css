@@ -9,7 +9,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  display: none !important;
   justify-content: center;
   align-items: center;
   background-color: #fcfcfc;
@@ -31,4 +30,4 @@
   letter-spacing: -2%;
   font-family: "Montserrat";
   overflow: hidden;
-}
+}/*# sourceMappingURL=loading.css.map */

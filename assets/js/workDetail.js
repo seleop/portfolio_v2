@@ -5,16 +5,6 @@ const videos = document.querySelectorAll(".workVideo");
 const detailcontext = document.querySelectorAll(".detail-context");
 const featuredWork = new SplitType(document.querySelector("#featuredWork"), { type: "chars" });
 
-// let mm = gsap.matchMedia()
-// let breakPoint = 1280;
-
-// mm.add({
-//     isDesktop : `(min-width: ${breakPoint}px)`,
-//     isLaptop : `(min-width : ${breakPoint}px)`
-// }, (context) => {
-//     let { isDesktop, isLaptop} = context.conditions
-// })
-
 gsap.from(featuredWork.chars, {
     scrollTrigger: { trigger: "#featuredWork", start: "top 80%", end: "top center", scrub: 2 },
     yPercent: 50,
@@ -43,7 +33,6 @@ for (let i = 0; i < detailbox.length; i++) {
                     .to(currentContext, { opacity: 1, duration: 0.5, ease: CustomEase.create("custom", vezier) }, 0);
                 gsap.to(currentimgwrap, {
                     width: imgWidth,
-                    aspectRatio: "1.83 / 1",
                     top: "50%",
                     right: "2%",
                     translateY: "-50%",

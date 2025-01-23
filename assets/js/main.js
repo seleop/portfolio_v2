@@ -4,23 +4,36 @@ const vezier = "M0,0 C0,0 0.187,-0.022 0.301,0.089 0.469,0.258 0.522,0.723 0.7,0
 
 const section1Video = document.querySelector(".section1_bg_video");
 const workVideos = document.querySelectorAll(".workbgr");
+const lenis = new Lenis({
+    duration: 1,
+});
+lenis.on("scroll", ScrollTrigger.update);
+gsap.ticker.add((time) => {
+    lenis.raf(time * 300);
+});
+gsap.ticker.lagSmoothing(1000, 16);
 
 const slowVideo = (video, rate) => {
     video.playbackRate = rate
 };
-const settingScroll = () => {
-    const lenis = new Lenis({
-        duration: 1,
-    });
-    lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 300);
-    });
-    gsap.ticker.lagSmoothing(1000, 16);
-};
+
 const refleshPage = () => {
     window.addEventListener('beforeunload', () => {
         window.scrollTo(0, 0);
+    })
+};
+
+const scrollTo = () => {
+    const navButtons = document.querySelectorAll(".categories li");
+    const sections = [document.querySelector("body"), document.querySelector(".skillssection"), document.querySelector(".bandsection"), document.querySelector(".myselfsection")]
+    navButtons.forEach((ele, index) => {
+        ele.addEventListener('click', () => {
+            lenis.stop();
+            window.scrollTo({
+                top : sections[index].offsetTop
+            });
+            lenis.start();
+        })
     })
 };
 const cursorMove = () => {
@@ -57,13 +70,32 @@ const cursorMove = () => {
     })
 }
 
+const checkVideo = () => {
+    const ob = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const target = entry.target;
+            if(entry.isIntersecting){
+                target.play()
+            } else {
+                target.pause()
+            }
+        })
+    }, {
+        root : null,
+        threshold : 0.3,
+    })
+    document.querySelectorAll('.observedVideo').forEach((video) => {
+        ob.observe(video)
+    })
+}
+
 const functionInit = () => {
     refleshPage();
-    settingScroll();
     slowVideo(section1Video, 0.7);
     workVideos.forEach((e)=> {slowVideo(e, 0.6);})
     cursorMove()
+    scrollTo();
+    checkVideo();
 };
-
 /* 함수 실행 */
 functionInit();
