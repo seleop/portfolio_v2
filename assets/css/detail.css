@@ -79,12 +79,10 @@
 }
 @keyframes imgViewing {
   0% {
-    -o-object-position: top;
-       object-position: top;
+    object-position: top;
   }
   100% {
-    -o-object-position: bottom;
-       object-position: bottom;
+    object-position: bottom;
   }
 }
 @keyframes floatSway {
@@ -130,8 +128,7 @@
 .section6-detail .detail-bgr img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section6-detail .detail-inner {
   position: relative;
@@ -210,10 +207,8 @@
 .section6-detail .detail-inner .detail-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
   border-radius: 20px;
 }
 .section6-detail .detail-inner .detail-img img.hide {
@@ -222,10 +217,9 @@
 .section6-detail .detail-inner .detail-img video {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 .section6-detail .detail-inner .detail-img video.hide {
   display: none;
-}/*# sourceMappingURL=detail.css.map */
+}
